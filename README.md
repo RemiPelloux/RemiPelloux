@@ -32,3 +32,5 @@ I have a strong interest in web3 and solidity, and enjoy exploring the potential
 💡 Passionate about sharing my knowledge and learning from others. Aspiring to be a professor and share my love of development with others.
 
 🙌 Excited to bring my enthusiasm and skills to any project that I am a part of, and looking forward to the opportunity to work with you and contribute my expertise to your team.
+
+Most of my commit are private because i'm working for private project <3
