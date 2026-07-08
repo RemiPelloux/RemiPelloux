@@ -12,30 +12,7 @@
 
 ---
 
-## 🚀 What I'm Building
 
-<table>
-<tr>
-<td width="50%">
-
-### [Lumimmo](https://lumimmo.com)
-AI-powered real estate photo enhancement
-- ⚡ 30-second processing
-- 💰 Pay-as-you-go pricing
-- 🏠 Built for real estate pros
-
-</td>
-<td width="50%">
-
-### [Leadsit](https://leadsit.eu)
-B2B lead generation & scraping tool
-- 🎯 Business contact extraction
-- 📊 Data enrichment
-- 🔄 API integrations
-
-</td>
-</tr>
-</table>
 
 ---
 
