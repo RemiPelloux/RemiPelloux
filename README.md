@@ -68,20 +68,6 @@
 
 ---
 
-## 📌 Featured Projects
-
-<div align="center">
-
-[![BlackJackAI](https://github-readme-stats.vercel.app/api/pin/?username=RemiPelloux&repo=BlackJackAI&theme=tokyonight&hide_border=true&bg_color=0D1117)](https://github.com/RemiPelloux/BlackJackAI)
-[![Multi-Threaded-Prime](https://github-readme-stats.vercel.app/api/pin/?username=RemiPelloux&repo=Multi-Threaded-Prime-Number-Calculation&theme=tokyonight&hide_border=true&bg_color=0D1117)](https://github.com/RemiPelloux/Multi-Threaded-Prime-Number-Calculation)
-
-</div>
-
-| Project | Tech | Description |
-|---------|------|-------------|
-| **BlackJackAI** | Python, RL | Sarsa(λ) reinforcement learning agent for optimal blackjack strategy |
-| **Multi-Threaded Prime** | Python | Parallel computing exploration with multi-threaded algorithms |
-
 ---
 
 ## 🔬 Currently Exploring
