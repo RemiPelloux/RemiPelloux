@@ -1,181 +1,124 @@
 <p align="center">
   <picture>
     <source media="(max-width: 600px)" srcset="./assets/profile-banner-mobile.png" />
-    <img src="./assets/profile-banner.png" alt="Rémi Pelloux | CTO at OpenPro | AI systems, native apps and developer tools" width="100%" />
+    <img src="./assets/profile-banner.png" alt="Rémi Pelloux, CTO at OpenPro in France. AI agents, native applications and developer tools." width="100%" />
   </picture>
 </p>
 
+<h1 align="center">Rémi Pelloux · CTO at OpenPro</h1>
+<p align="center"><strong>AI agents. Native apps. Connected products.</strong><br />
+Software engineer & technology leader based in France.</p>
+
 <p align="center">
-  <a href="https://openpro.ai"><strong>OpenPro</strong></a> &nbsp; / &nbsp;
-  <a href="#selected-projects">Projects</a> &nbsp; / &nbsp;
-  <a href="#contributions-in-code">Contributions</a> &nbsp; / &nbsp;
+  <a href="https://openpro.ai">OpenPro</a> &nbsp; · &nbsp;
+  <a href="#projects">Projects</a> &nbsp; · &nbsp;
+  <a href="#github-contributions">Contributions</a> &nbsp; · &nbsp;
   <a href="https://www.linkedin.com/in/remipelloux/">LinkedIn</a>
 </p>
 
-## Rémi Pelloux
+## What we do at OpenPro
 
-**CTO at [OpenPro](https://openpro.ai), based in France.**
+We connect **people, jobs and companies** through a French professional network:
+video CVs and job offers, AI matching, real-time messaging and Mia, our AI assistant.
+Available on web, iOS and Android; free for candidates. **I lead the technology.**
 
-I build products from the interface down to the runtime: professional networking,
-AI agents, native applications and developer infrastructure. My work often starts
-where two systems fail to connect: an ATS and a recruiting platform, a recording
-device and your notes, an AI model and the tools it needs to do useful work.
+<a href="https://openpro.ai">
+  <picture>
+    <source media="(max-width: 600px)" srcset="./assets/openpro-features-mobile.png" />
+    <img src="./assets/openpro-features.png" alt="OpenPro: video profiles, AI recruitment matching, messaging, and ATS plus MCP integrations." width="100%" />
+  </picture>
+</a>
 
-I care about what happens after the demo: how people install it, where their data
-lives, how it recovers from failure and whether it feels fast in everyday use.
+[Explore OpenPro](https://openpro.ai) · [Connect your ATS](https://github.com/RemiPelloux/openpro-connector-sdk)
 
-## What we're building at OpenPro
+<a name="github-contributions"></a>
 
-**A French professional network connecting people, jobs and companies.**
-We bring together video job offers, video CVs, AI matching and real-time messaging
-across web, iOS and Android. Mia, our AI assistant, helps candidates with career
-questions and interview preparation, and recruiters with job descriptions and sourcing.
+## GitHub contributions
 
-The goal is to give candidates more ways to show who they are and help recruiters
-find and connect with relevant people. Candidates can use OpenPro for free.
+<a href="https://github.com/RemiPelloux?tab=overview">
+  <picture>
+    <source media="(max-width: 600px)" srcset="./assets/contributions-mobile.svg" />
+    <img src="./assets/contributions.svg" alt="Rémi Pelloux's GitHub contribution calendar, showing daily activity over the last year." width="100%" />
+  </picture>
+</a>
 
-As CTO, I lead the technology behind that product. Our public developer work
-also makes OpenPro easier to connect to existing workflows:
+<p align="center"><sub>GitHub contribution data · Refreshed daily · Activity across original projects and maintained forks</sub></p>
 
-- **ATS integration:** the [OpenPro Connector SDK](https://github.com/RemiPelloux/openpro-connector-sdk)
-  maps and publishes job offers while the ATS remains the source of truth.
-- **Developer access:** a PHP SDK, HTTP examples for multiple languages, and
-  documented [MCP integration](https://github.com/RemiPelloux/openpro-connector-sdk#8-connect-mcp).
-- **Agent tooling:** [OpenAgents](https://github.com/RemiPelloux/OpenAgents),
-  our self-hosted adaptation of Hermes Agent for tools, memory and team workflows.
+<a name="projects"></a>
 
-[Explore OpenPro](https://openpro.ai) · [Build a connector](https://github.com/RemiPelloux/openpro-connector-sdk#6-build-a-connector)
+## Projects
 
-## Selected projects
+<table>
+<tr>
+<td width="50%" valign="top">
+<img src="./assets/icons/openplod.svg" width="48" height="48" alt="Audio waveform" />
+<h3><a href="https://github.com/RemiPelloux/OpenPlod">OpenPlod</a></h3>
+<strong>Turn recordings into knowledge.</strong>
+<p>A local audio vault with Plaud imports, AI transcripts, Markdown documents and MCP.</p>
+<p><code>TypeScript</code> <code>Rust</code> <code>Tauri</code></p>
+<a href="https://github.com/RemiPelloux/OpenPlod/releases/tag/v0.3.0">Explore v0.3.0</a><br />
+<sub>Experimental; Plaud authorization required.</sub>
+</td>
+<td width="50%" valign="top">
+<img src="./assets/icons/lumasync.svg" width="48" height="48" alt="Ambient light bulb" />
+<h3><a href="https://github.com/RemiPelloux/lumasync">LumaSync</a></h3>
+<strong>Bring your screen into the room.</strong>
+<p>Local Philips Hue lighting driven by fast screen capture and perceptual color analysis.</p>
+<p><code>Rust</code> <code>DXGI</code> <code>React</code></p>
+<a href="https://github.com/RemiPelloux/lumasync/commit/11d8bdd12079a1e7d4559e9762d1ff70b00013ca">See the color engine</a><br />
+<sub>Windows + Hue Bridge. Frames stay local.</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<img src="./assets/icons/openagents.svg" width="48" height="48" alt="AI agent" />
+<h3><a href="https://github.com/RemiPelloux/OpenAgents">OpenAgents</a></h3>
+<strong>Give agents the tools to act.</strong>
+<p>Self-hosted AI agents with memory, MCP, multiple model providers and team workflows.</p>
+<p><code>Python</code> <code>MCP</code> <code>Docker</code></p>
+<a href="https://github.com/RemiPelloux/OpenAgents/commit/3c53b593386388a1fdf49c0ff4c882b1ea4e5d43">My worker contributions</a><br />
+<sub>OpenPro fork of <a href="https://github.com/NousResearch/Hermes-agent">Hermes Agent</a>.</sub>
+</td>
+<td width="50%" valign="top">
+<img src="./assets/icons/opennative.svg" width="48" height="48" alt="Gaming controller" />
+<h3><a href="https://github.com/RemiPelloux/OpenNative">OpenNative</a></h3>
+<strong>Bring PC gaming to handhelds.</strong>
+<p>Windows compatibility on Android, with per-game runtimes, controls and warm-prefix launches.</p>
+<p><code>Kotlin</code> <code>Android</code> <code>Wine</code></p>
+<a href="https://github.com/RemiPelloux/OpenNative/commit/6ff47dfd13f0db65be005430ec5dc78ca5b5997b">My launch improvements</a><br />
+<sub>Built on <a href="https://github.com/utkarshdalal/GameNative">GameNative</a>.</sub>
+</td>
+</tr>
+</table>
 
-My public work spans company tooling and independent projects. These are some of
-the problems I'm working on, and the engineering behind them.
+### Developer tools
 
-### [OpenPlod](https://github.com/RemiPelloux/OpenPlod) · Audio into usable knowledge
+<img src="./assets/icons/sdk.svg" width="24" height="24" alt="API connector" /> **[OpenPro Connector SDK](https://github.com/RemiPelloux/openpro-connector-sdk)** · Sync ATS jobs into OpenPro through PHP, HTTP and MCP.
 
-**Why:** a useful recording should become something you can find, edit and reuse.
+<img src="./assets/icons/openplod.svg" width="24" height="24" alt="Audio API" /> **[OpenWhistle SDKs](https://github.com/RemiPelloux/openwhistle-sdks)** · Connect audio workflows with clients for JavaScript, Python, PHP, Rust and Go.
 
-OpenPlod keeps audio in a desktop vault and turns transcripts into a Markdown
-workspace. It combines direct Plaud Note Pro imports on macOS, an Android
-companion, local or cloud transcription, and document generation with Mistral.
-Audio, transcripts and generated documents remain separate, with source references
-and revision history. A REST API and MCP connect the vault to other tools.
+<img src="./assets/icons/containust.svg" width="24" height="24" alt="Container runtime" /> **[Containust](https://github.com/RemiPelloux/Containust)** · Daemon-less containers in Rust. Local and air-gapped workflows; commercial source-available license.
 
-**Recent work:** the [0.3.0 release](https://github.com/RemiPelloux/OpenPlod/releases/tag/v0.3.0)
-adds the Markdown workspace, document workflows and MCP access.
+## Engineering stack
 
-<sub>TypeScript · React · Tauri · Rust · Bluetooth · MCP</sub>
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/toolbox-mobile.png" />
+  <img src="./assets/toolbox.png" alt="Engineering stack: TypeScript and React; Python and MCP; Rust and Tauri; Docker and PostgreSQL." width="100%" />
+</picture>
 
-<sub>Experimental. Direct Plaud extraction is verified on one authorized Note Pro
-and Apple Silicon Mac; initial device authorization still needs private provisioning.</sub>
-
-### [LumaSync](https://github.com/RemiPelloux/lumasync) · Screen colors, room-scale light
-
-**Why:** ambient lighting should follow what you see, react quickly and keep screen content local.
-
-LumaSync captures the Windows screen through DXGI, analyzes colors in Rust and
-streams them to Philips Hue Entertainment. The engine uses directional sampling,
-perceptual color analysis, predictive smoothing and black-bar detection.
-Frames stay on the PC; calculated colors go to the local Hue Bridge.
-
-**My focus:** capture and processing latency, stable color transitions, reused
-buffers and telemetry that makes performance visible.
-
-<sub>Rust · Tauri · React · TypeScript · DXGI · DTLS</sub>
-
-### [OpenAgents](https://github.com/RemiPelloux/OpenAgents) · Agents inside real workflows
-
-**Why:** using an agent across a team takes more than choosing a model. It needs
-tools, context, repeatable workflows and an environment that can run the work.
-
-OpenAgents is an OpenPro fork of [Hermes Agent](https://github.com/NousResearch/Hermes-agent).
-It brings a self-hosted agent to the terminal, messaging apps, desktop and web,
-with multiple model providers, persistent memory, MCP and company workspaces.
-
-**My recent contributions:** worker tooling, pinned build environments, output
-validation and read-only engineering inspections. The upstream Hermes project
-provides the foundation; our fork adds OpenPro identity and team-oriented workflows.
-
-<sub>Python · LLM providers · MCP · Docker · Agent orchestration</sub>
-
-### [OpenNative](https://github.com/RemiPelloux/OpenNative) · PC software on Android handhelds
-
-**Why:** launching a game is only part of the experience. Runtime setup, controls,
-frame delivery and recovery need to work together on a handheld.
-
-Built on [GameNative](https://github.com/utkarshdalal/GameNative), OpenNative combines
-Wine/Proton, DXVK, VKD3D, Box64 and FEX in an Android interface with per-game
-configuration and runtime management.
-
-**My recent contributions:** warm-prefix launches that skip unchanged setup work,
-shared-prefix locking, crash-safe activation and batched library queries.
-Performance depends on the game, device and runtime; improvements need measurements.
-
-<sub>Kotlin · Android · Wine/Proton · Graphics translation</sub>
-
-### More tools, with a purpose
-
-- **[OpenPro Connector SDK](https://github.com/RemiPelloux/openpro-connector-sdk):**
-  reduce repeated integration work with normalized job offers, connector manifests,
-  a PHP client and examples for other languages.
-- **[OpenWhistle SDKs](https://github.com/RemiPelloux/openwhistle-sdks):**
-  connect audio workflows to applications through clients for JavaScript/TypeScript,
-  Python, PHP, Rust and Go. Shared concerns include authentication, workspace
-  selection, uploads, runs, reports and errors.
-- **[Containust](https://github.com/RemiPelloux/Containust):**
-  run container stacks without a privileged daemon, including local and air-gapped
-  workflows. Written in Rust, with `.ctst` composition, Linux isolation and QEMU
-  backends. Source-available under a commercial license.
-
-## Contributions in code
-
-A few concrete changes from my public commit history:
-
-- **[OpenPlod: Markdown workspace and MCP](https://github.com/RemiPelloux/OpenPlod/commit/119ed6766e60468116f153e952514d8dba81691a)**
-  makes transcripts part of an editable, connected document workflow.
-- **[LumaSync: rebuilt color engine](https://github.com/RemiPelloux/lumasync/commit/11d8bdd12079a1e7d4559e9762d1ff70b00013ca)**
-  develops the low-latency directional sampling pipeline and modularizes its sources.
-- **[OpenNative: warm-prefix launch](https://github.com/RemiPelloux/OpenNative/commit/6ff47dfd13f0db65be005430ec5dc78ca5b5997b)**
-  avoids redundant Wine initialization and protects shared runtime state.
-- **[OpenNative: batched library queries](https://github.com/RemiPelloux/OpenNative/commit/ed57524130fff8bb9326d98bc4e6ad7d082fea84)**
-  removes repeated reads across the library, DLC and download paths.
-- **[OpenAgents: engineering inspections](https://github.com/RemiPelloux/OpenAgents/commit/3c53b593386388a1fdf49c0ff4c882b1ea4e5d43)**
-  adds read-only inspection capabilities to the worker.
-
-These are contributions to projects I build or maintain, including the forks
-credited above. Their upstream projects and dependencies are part of the story.
-
-[Browse public activity](https://github.com/RemiPelloux?tab=overview) ·
-[Explore all repositories](https://github.com/RemiPelloux?tab=repositories)
-
-## How I work
-
-- **Start with the workflow.** Follow a real task from first use to a useful result.
-- **Make systems connect.** Treat APIs, SDKs, data formats and documentation as product features.
-- **Keep ownership clear.** Preserve original data, distinguish generated content and make export practical.
-- **Measure the hard parts.** Look at latency, repeated work, failure recovery and device constraints.
-- **Build on existing work.** Credit upstream projects and be explicit about what a fork changes.
+<p align="center"><code>PHP / Symfony</code> <code>Kotlin / C++</code> <code>AWS</code> <code>Redis</code> <code>RAG</code> <code>CI/CD</code></p>
 
 <details>
-<summary><strong>Technical toolbox</strong></summary>
+<summary><strong>What matters in my engineering</strong></summary>
 
-<br />
-
-| Area | Languages & tools |
-| --- | --- |
-| Product & web | TypeScript, JavaScript, React, Node.js, PHP, Symfony |
-| Native & systems | Rust, Tauri, Kotlin, C++ |
-| AI & automation | Python, LLM APIs, RAG, MCP, agent frameworks |
-| Data & infrastructure | PostgreSQL, MySQL, Redis, Docker, AWS, CI/CD |
+- Useful workflows, from first install to everyday use.
+- Local data ownership, portable formats and practical APIs.
+- Measured latency, reliable recovery and clear upstream credits.
 
 </details>
 
-## Build with me
+---
 
-Interested in recruiting technology, practical AI agents, native tools or developer
-infrastructure? [Connect on LinkedIn](https://www.linkedin.com/in/remipelloux/).
-
-For project feedback, use the relevant repository's issues. Reproducible bug
-reports, device compatibility results, performance measurements and documentation
-improvements are especially useful. Check each project's contribution guide and
-license before submitting changes.
+<p align="center"><strong>Building useful software across AI, products and systems.</strong><br />
+<a href="https://www.linkedin.com/in/remipelloux/">Let's connect</a> ·
+<a href="https://github.com/RemiPelloux?tab=repositories">Explore all repositories</a></p>

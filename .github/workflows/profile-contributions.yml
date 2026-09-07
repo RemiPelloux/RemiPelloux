@@ -1,0 +1,30 @@
+name: Refresh contribution calendar
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: profile-contributions
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Render GitHub contribution data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/contributions.mjs
+      - name: Commit updated images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/contributions.svg assets/contributions-mobile.svg
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'chore: refresh contribution calendar'
+          git pull --rebase origin main
+          git push origin HEAD:main
