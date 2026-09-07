@@ -8,8 +8,7 @@
 <p align="center">
   <a href="https://openpro.ai"><strong>OpenPro</strong></a> &nbsp; / &nbsp;
   <a href="https://github.com/RemiPelloux?tab=repositories">Projects</a> &nbsp; / &nbsp;
-  <a href="https://www.linkedin.com/in/remipelloux/">LinkedIn</a> &nbsp; / &nbsp;
-  <a href="mailto:pellouxremi@gmail.com">Email</a>
+  <a href="https://www.linkedin.com/in/remipelloux/">LinkedIn</a>
 </p>
 
 I'm **Rémi, CTO at [OpenPro](https://openpro.ai)**, based in France.
@@ -85,6 +84,5 @@ streaming. Screen frames stay on the PC; computed colors go to the local bridge.
 ---
 
 **Building something that connects these worlds?**
-[Let's talk](mailto:pellouxremi@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/remipelloux/) ·
 [All public repositories](https://github.com/RemiPelloux?tab=repositories)
