@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remi Pelloux profile banner</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; letter-spacing: 0; }
+  .banner {
+    position: relative;
+    width: 1200px;
+    height: 480px;
+    overflow: hidden;
+    background: #eef3f6;
+    color: #192327;
+    font-family: "Avenir Next", Avenir, sans-serif;
+  }
+  .ribbon {
+    position: absolute;
+    top: -235px;
+    width: 100px;
+    height: 1000px;
+    transform: rotate(32deg);
+  }
+  .cobalt { left: 865px; background: #2654ed; }
+  .mint { left: 985px; background: #91d7bc; }
+  .coral { left: 1105px; background: #f57f72; }
+  .name {
+    position: absolute;
+    left: 52px;
+    top: 41px;
+    margin: 0;
+    font-size: 124px;
+    font-weight: 750;
+    line-height: 1.01;
+  }
+  .name span { display: block; }
+  .role {
+    position: absolute;
+    left: 59px;
+    top: 316px;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .focus {
+    position: absolute;
+    inset: auto 0 0;
+    height: 78px;
+    padding: 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #192327;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .focus span { display: flex; align-items: center; gap: 16px; }
+  .focus i { width: 9px; height: 9px; display: inline-block; }
+  @media (max-width: 720px) {
+    .banner { width: 720px; height: 480px; }
+    .name { left: 34px; top: 38px; font-size: 110px; }
+    .role { left: 40px; top: 299px; font-size: 40px; }
+    .ribbon { width: 70px; transform: rotate(23deg); }
+    .cobalt { left: 590px; }
+    .mint { left: 675px; }
+    .coral { left: 760px; }
+    .focus { padding: 0 40px; height: 80px; font-size: 36px; }
+    .focus span { display: none; }
+    .focus::after { content: "AI. Native. Tools."; }
+  }
+</style>
+<div class="banner" role="img" aria-label="Remi Pelloux, CTO at OpenPro. AI systems, native apps and developer tools.">
+  <div class="ribbon cobalt"></div>
+  <div class="ribbon mint"></div>
+  <div class="ribbon coral"></div>
+  <h1 class="name"><span>R&eacute;mi</span><span>Pelloux</span></h1>
+  <p class="role">CTO at OpenPro</p>
+  <div class="focus">
+    <span><i style="background:#91d7bc"></i>AI systems</span>
+    <span><i style="background:#f57f72"></i>Native apps</span>
+    <span><i style="background:#91adff"></i>Developer tools</span>
+  </div>
+</div>
+</html>
