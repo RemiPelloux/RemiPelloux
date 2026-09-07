@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">LumaSync softly glowing light</title>
+  <style>
+    .light { animation: light 3.6s cubic-bezier(0.77,0,0.175,1) infinite; }
+    .rays { animation: rays 3.6s cubic-bezier(0.77,0,0.175,1) infinite; }
+    @keyframes light { 0%,100% { opacity: 0.12; } 50% { opacity: 0.48; } }
+    @keyframes rays { 0%,100% { opacity: 0.2; } 50% { opacity: 0.85; } }
+    @media (prefers-reduced-motion: reduce) { .light,.rays { animation: none; } }
+  </style>
+  <rect width="64" height="64" rx="8" fill="#fff4c9"/>
+  <path class="light" d="M23 29A9 9 0 1 1 41 29C41 34 36 35 36 40H28C28 35 23 34 23 29Z" fill="#f3bf39" opacity="0.3"/>
+  <g fill="none" stroke="#a35509" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 29A9 9 0 1 1 41 29C41 34 36 35 36 40H28C28 35 23 34 23 29Z M28 44H36 M30 48H34"/>
+    <g class="rays" opacity="0.65"><path d="M32 12V15 M16 19L19 22 M45 22L48 19 M13 31H17 M47 31H51"/></g>
+  </g>
+</svg>

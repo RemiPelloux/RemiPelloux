@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="160" viewBox="0 0 280 160" role="img" aria-labelledby="title desc">
+  <title id="title">OpenPro's little CLI mascot</title>
+  <desc id="desc">A blue slime gently bounces, looks around and blinks. Adapted from the OpenCode-style mascot in OpenAgents. Motion stops when reduced motion is requested.</desc>
+  <style>
+    .body { transform-origin: 140px 128px; animation: breathe 3.6s cubic-bezier(0.77,0,0.175,1) infinite; }
+    .eyes { transform-box: fill-box; transform-origin: center; animation: blink 5.4s linear infinite; }
+    .pupils { animation: glance 7.2s cubic-bezier(0.77,0,0.175,1) infinite; }
+    .shadow { transform-origin: 140px 141px; animation: shadow 3.6s cubic-bezier(0.77,0,0.175,1) infinite; }
+    @keyframes breathe {
+      0%,100% { transform: translateY(0) scale(1.025,0.975); }
+      50% { transform: translateY(-9px) scale(0.985,1.015); }
+    }
+    @keyframes blink {
+      0%,43%,47%,100% { transform: scaleY(1); }
+      45% { transform: scaleY(0.08); }
+    }
+    @keyframes glance {
+      0%,20%,80%,100% { transform: translateX(0); }
+      35%,45% { transform: translateX(3px); }
+      60%,70% { transform: translateX(-3px); }
+    }
+    @keyframes shadow {
+      0%,100% { transform: scaleX(1); opacity: 0.16; }
+      50% { transform: scaleX(0.86); opacity: 0.1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .body,.eyes,.pupils,.shadow { animation: none; }
+    }
+  </style>
+  <ellipse class="shadow" cx="140" cy="141" rx="51" ry="5" fill="#61738c" opacity="0.16"/>
+  <g class="body">
+    <path d="M104 50H116V40H164V50H176V62H188V98H180V114H168V126H112V114H100V98H92V74H104Z" fill="#2654ed"/>
+    <path d="M116 49H164V55H116ZM107 61H114V81H107Z" fill="#91d7bc"/>
+    <path d="M111 125H131V133H111ZM149 125H169V133H149Z" fill="#2654ed"/>
+    <g class="eyes">
+      <rect x="112" y="70" width="22" height="26" rx="10" fill="#ffffff"/>
+      <rect x="148" y="70" width="22" height="26" rx="10" fill="#ffffff"/>
+      <g class="pupils" fill="#192327">
+        <rect x="119" y="77" width="12" height="16" rx="6"/>
+        <rect x="151" y="77" width="12" height="16" rx="6"/>
+        <path d="M120 78H124V82H120ZM152 78H156V82H152Z" fill="#ffffff"/>
+      </g>
+    </g>
+    <path d="M131 106Q140 114 149 106" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M105 101H114M168 101H177" stroke="#f57f72" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

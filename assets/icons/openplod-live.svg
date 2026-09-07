@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">OpenPlod animated audio waveform</title>
+  <style>
+    .bar { transform-box: fill-box; transform-origin: center; animation: audio 2.4s cubic-bezier(0.77,0,0.175,1) infinite; }
+    .b2 { animation-delay: -0.4s; }.b3 { animation-delay: -0.8s; }.b4 { animation-delay: -1.2s; }.b5 { animation-delay: -1.6s; }.b6 { animation-delay: -2s; }
+    @keyframes audio { 0%,100% { transform: scaleY(0.55); } 50% { transform: scaleY(1); } }
+    @media (prefers-reduced-motion: reduce) { .bar { animation: none; } }
+  </style>
+  <rect width="64" height="64" rx="8" fill="#eaf0ff"/>
+  <g fill="none" stroke="#2763e7" stroke-width="2.4" stroke-linecap="round">
+    <path class="bar" d="M19 28V36"/>
+    <path class="bar b2" d="M24 22V42"/>
+    <path class="bar b3" d="M29 18V46"/>
+    <path class="bar b4" d="M34 25V39"/>
+    <path class="bar b5" d="M39 21V43"/>
+    <path class="bar b6" d="M44 28V36"/>
+  </g>
+</svg>

@@ -5,6 +5,15 @@
   </picture>
 </p>
 
+<p align="center">
+  <a href="https://github.com/RemiPelloux/OpenAgents">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce)" srcset="./assets/openpro-mascot-still.png" />
+      <img src="./assets/openpro-mascot.svg" width="168" height="96" alt="OpenPro's animated CLI mascot, a little blue slime that bounces and blinks." />
+    </picture>
+  </a>
+</p>
+
 <h1 align="center">Rémi Pelloux · CTO at OpenPro</h1>
 <p align="center"><strong>AI agents. Native apps. Connected products.</strong><br />
 Software engineer & technology leader based in France.</p>
@@ -51,7 +60,10 @@ Available on web, iOS and Android; free for candidates. **I lead the technology.
 <table>
 <tr>
 <td width="50%" valign="top">
-<img src="./assets/icons/openplod.svg" width="48" height="48" alt="Audio waveform" />
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/icons/openplod.svg" />
+<img src="./assets/icons/openplod-live.svg" width="48" height="48" alt="Animated audio waveform" />
+</picture>
 <h3><a href="https://github.com/RemiPelloux/OpenPlod">OpenPlod</a></h3>
 <strong>Turn recordings into knowledge.</strong>
 <p>A local audio vault with Plaud imports, AI transcripts, Markdown documents and MCP.</p>
@@ -60,7 +72,10 @@ Available on web, iOS and Android; free for candidates. **I lead the technology.
 <sub>Experimental; Plaud authorization required.</sub>
 </td>
 <td width="50%" valign="top">
-<img src="./assets/icons/lumasync.svg" width="48" height="48" alt="Ambient light bulb" />
+<picture>
+<source media="(prefers-reduced-motion: reduce)" srcset="./assets/icons/lumasync.svg" />
+<img src="./assets/icons/lumasync-live.svg" width="48" height="48" alt="Softly glowing ambient light bulb" />
+</picture>
 <h3><a href="https://github.com/RemiPelloux/lumasync">LumaSync</a></h3>
 <strong>Bring your screen into the room.</strong>
 <p>Local Philips Hue lighting driven by fast screen capture and perceptual color analysis.</p>
