@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="400" viewBox="0 0 590 400" role="img" aria-labelledby="t d">
+  <title id="t">OpenNative, PC games on Android handhelds</title>
+  <desc id="d">Animated illustration: a gaming handheld whose screen shows a scrolling frame-time graph, with pulsing controls and the runtime stack Wine, DXVK, VKD3D, Box64 and FEX.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#140a0a"/>
+      <stop offset="1" stop-color="#22110f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f48271" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#f48271" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2433"/>
+      <stop offset="1" stop-color="#0b1119"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="590" height="400" rx="18"/></clipPath>
+    <clipPath id="scr"><rect x="-120" y="-62" width="240" height="124" rx="8"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-variant-ligatures: none; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .graph { animation: scroll 4s linear infinite; }
+    @keyframes scroll { to { transform: translateX(-160px); } }
+    .btn { transform-box: fill-box; transform-origin: center; animation: press 3.2s ease-in-out infinite; }
+    .b2 { animation-delay: .4s; } .b3 { animation-delay: .8s; } .b4 { animation-delay: 1.2s; }
+    @keyframes press { 0%,20%,100% { transform: scale(1); opacity: .9; } 10% { transform: scale(.78); opacity: 1; } }
+    .stick { animation: stick 4s ease-in-out infinite; }
+    @keyframes stick { 0%,100% { transform: translate(0,0); } 25% { transform: translate(5px,-3px); } 50% { transform: translate(-4px,4px); } 75% { transform: translate(3px,4px); } }
+    .glow { transform-box: fill-box; transform-origin: center; animation: breathe 5s ease-in-out infinite; }
+    @keyframes breathe { 0%,100% { opacity: .7; } 50% { opacity: 1; } }
+    .layer { opacity: 0; animation: layer 6s cubic-bezier(.16,1,.3,1) infinite; }
+    .y2 { animation-delay: .25s; } .y3 { animation-delay: .5s; } .y4 { animation-delay: .75s; } .y5 { animation-delay: 1s; }
+    @keyframes layer { 0% { opacity: 0; transform: translateX(16px); } 10%,88% { opacity: 1; transform: translateX(0); } 100% { opacity: 0; } }
+    .warm { animation: warm 2s steps(1) infinite; }
+    @keyframes warm { 50% { fill: #ffd2c9; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .layer { opacity: 1; } }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="590" height="400" fill="url(#bg)"/>
+    <ellipse class="glow" cx="210" cy="250" rx="260" ry="180" fill="url(#glow)"/>
+
+    <g class="sans">
+      <text x="36" y="52" font-size="12" font-weight="700" letter-spacing="2.2" fill="#f48271">ANDROID · HANDHELD · v1.6</text>
+      <text x="36" y="96" font-size="38" font-weight="800" letter-spacing="-1" fill="#ffffff">OpenNative</text>
+      <text x="36" y="126" font-size="16" fill="#e0b9b1">PC games on Android handhelds.</text>
+    </g>
+
+    <!-- handheld -->
+    <g transform="translate(200 250)">
+      <rect x="-180" y="-82" width="360" height="164" rx="62" fill="#2a1a18" stroke="#f48271" stroke-opacity="0.5" stroke-width="2"/>
+      <rect x="-124" y="-66" width="248" height="132" rx="10" fill="#090d13"/>
+      <g clip-path="url(#scr)">
+        <rect x="-120" y="-62" width="240" height="124" fill="url(#screen)"/>
+        <g stroke="#ffffff" stroke-opacity="0.06"><path d="M-120 -20H120M-120 20H120"/></g>
+        <g class="graph">
+          <polyline fill="none" stroke="#8fd8bc" stroke-width="2.5" stroke-linejoin="round" points="-120,10 -100,6 -80,12 -60,4 -40,8 -20,2 0,9 20,5 40,11 60,3 80,7 100,4 120,10 140,6 160,12 180,4 200,8 220,2 240,9 260,5 280,11"/>
+        </g>
+        <text class="mono warm" x="-108" y="-40" font-size="13" font-weight="700" fill="#ffffff">60 FPS</text>
+        <text class="mono" x="-108" y="-24" font-size="10" fill="#7c8aa5">frame time · stable</text>
+        <text class="mono" x="108" y="-40" font-size="10" text-anchor="end" fill="#7c8aa5">warm prefix ✓</text>
+        <text class="mono" x="-108" y="52" font-size="10" fill="#7c8aa5">DXVK · Turnip · Box64</text>
+      </g>
+      <!-- left stick -->
+      <circle cx="-150" cy="-26" r="15" fill="#1b1110" stroke="#5a3a35"/>
+      <circle class="stick" cx="-150" cy="-26" r="9" fill="#5a3a35"/>
+      <path d="M-156 26h12M-150 20v12" stroke="#5a3a35" stroke-width="5" stroke-linecap="round"/>
+      <!-- face buttons -->
+      <circle class="btn" cx="150" cy="-38" r="7" fill="#8fd8bc"/>
+      <circle class="btn b2" cx="164" cy="-24" r="7" fill="#f48271"/>
+      <circle class="btn b3" cx="136" cy="-24" r="7" fill="#6f8ff7"/>
+      <circle class="btn b4" cx="150" cy="-10" r="7" fill="#f5c26b"/>
+      <circle cx="150" cy="30" r="12" fill="#1b1110" stroke="#5a3a35"/>
+    </g>
+
+    <!-- runtime layers -->
+    <g class="mono" font-size="12" transform="translate(414 156)">
+      <text x="0" y="0" class="sans" font-size="11" font-weight="700" letter-spacing="1.8" fill="#b9918a">RUNTIME STACK</text>
+      <g class="layer"><rect x="0" y="14" width="140" height="28" rx="7" fill="#ffffff" fill-opacity="0.06"/><text x="12" y="32" fill="#ffd2c9">Wine / Proton</text></g>
+      <g class="layer y2"><rect x="0" y="48" width="140" height="28" rx="7" fill="#ffffff" fill-opacity="0.06"/><text x="12" y="66" fill="#ffd2c9">DXVK · VKD3D</text></g>
+      <g class="layer y3"><rect x="0" y="82" width="140" height="28" rx="7" fill="#ffffff" fill-opacity="0.06"/><text x="12" y="100" fill="#ffd2c9">Mesa · Turnip</text></g>
+      <g class="layer y4"><rect x="0" y="116" width="140" height="28" rx="7" fill="#ffffff" fill-opacity="0.06"/><text x="12" y="134" fill="#ffd2c9">Box64 · FEX</text></g>
+      <g class="layer y5"><rect x="0" y="150" width="140" height="28" rx="7" fill="#f48271" fill-opacity="0.22"/><text x="12" y="168" fill="#ffffff">Kotlin · C++</text></g>
+    </g>
+
+    <g class="sans" font-size="12" font-weight="600">
+      <g transform="translate(36 354)"><rect width="124" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="62" y="18.5" text-anchor="middle" fill="#f3d6d0">ARM64 · API 29+</text></g>
+      <g transform="translate(168 354)"><rect width="96" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="48" y="18.5" text-anchor="middle" fill="#f3d6d0">AYN Thor</text></g>
+      <g transform="translate(272 354)"><rect width="132" height="28" rx="14" fill="#f48271" fill-opacity="0.2"/><text x="66" y="18.5" text-anchor="middle" fill="#ffc2b6">Per-game profiles</text></g>
+    </g>
+  </g>
+</svg>

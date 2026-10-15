@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+  <title id="t">OpenVision, AI coding workspace</title>
+  <desc id="d">Animated illustration: an editor where an AI model suggests ghost text that is accepted with Tab, next to OpenVision's blinking eye mark and a list of bring-your-own model providers.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0b1a"/>
+      <stop offset="1" stop-color="#13102a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="iris" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1200" height="420" rx="18"/></clipPath>
+    <clipPath id="eyeClip"><path d="M-62 0 Q0 -46 62 0 Q0 46 -62 0 Z"/></clipPath>
+    <clipPath id="l1"><rect class="type t1" x="0" y="-16" width="300" height="24"/></clipPath>
+    <clipPath id="l2"><rect class="type t2" x="0" y="-16" width="300" height="24"/></clipPath>
+    <clipPath id="l3"><rect class="type t3" x="0" y="-16" width="300" height="24"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-variant-ligatures: none; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .glow { transform-box: fill-box; transform-origin: center; animation: breathe 6s ease-in-out infinite; }
+    @keyframes breathe { 0%,100% { opacity: .7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+    .lid { transform-box: fill-box; transform-origin: center; animation: lid 5s ease-in-out infinite; }
+    @keyframes lid { 0%,44%,52%,100% { transform: scaleY(1); } 48% { transform: scaleY(.08); } }
+    .pupil { animation: look 5s ease-in-out infinite; }
+    @keyframes look { 0%,20% { transform: translate(0,0); } 28%,40% { transform: translate(14px,-3px); } 60%,72% { transform: translate(-12px,2px); } 85%,100% { transform: translate(0,0); } }
+    .ring { transform-box: fill-box; transform-origin: center; animation: ring 3s ease-out infinite; }
+    .r2 { animation-delay: 1.5s; }
+    @keyframes ring { from { opacity: .6; transform: scale(.9); } to { opacity: 0; transform: scale(1.6); } }
+    .type { animation: 9s steps(30) infinite; transform: translateX(-300px); }
+    .t1 { animation-name: type1; } .t2 { animation-name: type2; } .t3 { animation-name: type3; }
+    @keyframes type1 { 0% { transform: translateX(-300px); } 12%,100% { transform: translateX(0); } }
+    @keyframes type2 { 0%,14% { transform: translateX(-300px); } 26%,100% { transform: translateX(0); } }
+    @keyframes type3 { 0%,28% { transform: translateX(-300px); } 38%,100% { transform: translateX(0); } }
+    .ghost { opacity: 0; animation: ghost 9s ease infinite; }
+    @keyframes ghost { 0%,40% { opacity: 0; } 44%,60% { opacity: .5; } 62%,92% { opacity: 1; fill: #e9e6ff; } 100% { opacity: 0; } }
+    .ghostCode { animation: ghostFill 9s steps(1) infinite; }
+    @keyframes ghostFill { 0%,61% { fill: #6b6890; } 62%,100% { fill: #e9e6ff; } }
+    .tab { opacity: 0; transform-box: fill-box; transform-origin: center; animation: tab 9s ease infinite; }
+    @keyframes tab { 0%,50% { opacity: 0; transform: scale(.85); } 54%,60% { opacity: 1; transform: scale(1); } 61% { transform: scale(.9); } 66%,100% { opacity: 0; transform: scale(1); } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .fadeAll { animation: fadeAll 9s ease infinite; }
+    @keyframes fadeAll { 0%,94% { opacity: 1; } 97% { opacity: 0; } 100% { opacity: 1; } }
+    .chip { opacity: 0; animation: chip 9s ease infinite; }
+    .c1 { animation-delay: 0s; } .c2 { animation-delay: .25s; } .c3 { animation-delay: .5s; }
+    @keyframes chip { 0%,2% { opacity: 0; transform: translateX(-10px); } 8%,100% { opacity: 1; transform: translateX(0); } }
+    .active { animation: active 9s ease infinite; }
+    @keyframes active { 0%,10% { stroke-opacity: .12; } 16%,100% { stroke-opacity: .9; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .type { transform: none; } .ghost, .tab, .chip { opacity: 1; }
+    }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="420" fill="url(#bg)"/>
+    <ellipse class="glow" cx="230" cy="210" rx="300" ry="260" fill="url(#glow)"/>
+
+    <!-- copy -->
+    <g class="sans">
+      <text x="56" y="62" font-size="13" font-weight="700" letter-spacing="2.5" fill="#a78bfa">LATEST PROJECT · v0.2 PREVIEW</text>
+      <text x="56" y="112" font-size="48" font-weight="800" letter-spacing="-1.5" fill="#ffffff">OpenVision</text>
+      <text x="56" y="146" font-size="20" fill="#c9c4ee">Your projects. Your models.</text>
+      <text x="56" y="172" font-size="20" fill="#c9c4ee">Your workflow.</text>
+    </g>
+
+    <!-- eye mark -->
+    <g transform="translate(200 290)">
+      <circle class="ring" r="66" fill="none" stroke="#a78bfa" stroke-width="2"/>
+      <circle class="ring r2" r="66" fill="none" stroke="#38bdf8" stroke-width="2"/>
+      <g class="lid">
+        <path d="M-62 0 Q0 -46 62 0 Q0 46 -62 0 Z" fill="#17142e" stroke="url(#iris)" stroke-width="4"/>
+        <g clip-path="url(#eyeClip)">
+          <g class="pupil">
+            <circle r="24" fill="url(#iris)"/>
+            <circle r="10" fill="#0a0b1a"/>
+            <circle cx="7" cy="-8" r="4" fill="#ffffff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- editor window -->
+    <g transform="translate(430 40)">
+      <rect width="720" height="340" rx="14" fill="#0f0e22" stroke="#ffffff" stroke-opacity="0.1"/>
+      <rect width="720" height="38" rx="14" fill="#16142f"/>
+      <rect y="24" width="720" height="14" fill="#16142f"/>
+      <circle cx="22" cy="19" r="6" fill="#f48271"/><circle cx="42" cy="19" r="6" fill="#f5c26b"/><circle cx="62" cy="19" r="6" fill="#8fd8bc"/>
+      <text class="mono" x="92" y="24" font-size="13" fill="#8c88b8">matcher.ts — OpenVision</text>
+
+      <!-- side: model providers -->
+      <g class="sans" transform="translate(468 62)">
+        <text x="0" y="0" font-size="11" font-weight="700" letter-spacing="1.8" fill="#8c88b8">MODELS · BRING YOUR OWN</text>
+        <g transform="translate(0 16)"><g class="chip c1">
+          <rect class="active" width="226" height="40" rx="9" fill="#1b1838" stroke="#a78bfa" stroke-width="1.5"/>
+          <circle cx="18" cy="20" r="5" fill="#8fd8bc"/>
+          <text x="32" y="25" font-size="14" fill="#e9e6ff">OpenAI-compatible API</text>
+        </g></g>
+        <g transform="translate(0 64)"><g class="chip c2">
+          <rect width="226" height="40" rx="9" fill="#1b1838" stroke="#ffffff" stroke-opacity="0.08"/>
+          <circle cx="18" cy="20" r="5" fill="#38bdf8"/>
+          <text x="32" y="25" font-size="14" fill="#c9c4ee">Local server · 127.0.0.1</text>
+        </g></g>
+        <g transform="translate(0 112)"><g class="chip c3">
+          <rect width="226" height="40" rx="9" fill="#1b1838" stroke="#ffffff" stroke-opacity="0.08"/>
+          <circle cx="18" cy="20" r="5" fill="#f5c26b"/>
+          <text x="32" y="25" font-size="14" fill="#c9c4ee">Tab model · separate</text>
+        </g></g>
+        <g transform="translate(0 176)" font-size="12" fill="#8c88b8">
+          <text y="0">✓ Agents with approved tools</text>
+          <text y="22">✓ MCP + project skills</text>
+          <text y="44">✓ No account · telemetry off</text>
+          <text y="66">✓ Portable Windows app</text>
+        </g>
+      </g>
+
+      <!-- code -->
+      <g class="mono fadeAll" font-size="15" transform="translate(28 80)">
+        <g fill="#5b5880"><text x="0" y="0">1</text><text x="0" y="30">2</text><text x="0" y="60">3</text><text x="0" y="90">4</text><text x="0" y="120">5</text><text x="0" y="150">6</text></g>
+        <g transform="translate(32 0)" clip-path="url(#l1)">
+          <text y="0"><tspan fill="#c792ea">export async function</tspan></text>
+        </g>
+        <g transform="translate(32 30)" clip-path="url(#l2)">
+          <text x="18" y="0"><tspan fill="#82aaff">rank</tspan><tspan fill="#e9e6ff">(job, people) {</tspan></text>
+        </g>
+        <g transform="translate(32 60)" clip-path="url(#l3)">
+          <text x="18" y="0"><tspan fill="#c792ea">const</tspan><tspan fill="#e9e6ff"> v = embed(job)</tspan></text>
+        </g>
+        <g class="ghost" transform="translate(32 90)">
+          <text class="ghostCode" x="18" y="0">return people</text>
+          <text class="ghostCode" x="36" y="30">.map(p =&gt; score(v, p))</text>
+          <text class="ghostCode" x="36" y="60">.sort(byScore)</text>
+        </g>
+        <rect class="caret" x="48" y="76" width="2" height="18" fill="#a78bfa"/>
+      </g>
+      <g transform="translate(290 268)"><g class="tab sans">
+        <rect width="122" height="34" rx="8" fill="#a78bfa"/>
+        <text x="14" y="22" font-size="14" font-weight="700" fill="#0f0e22">⇥ Tab · accept</text>
+      </g></g>
+    </g>
+  </g>
+</svg>

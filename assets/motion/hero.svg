@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="t d">
+  <title id="t">Rémi Pelloux, CTO at OpenPro</title>
+  <desc id="d">Animated banner: Rémi Pelloux, CTO at OpenPro. Building AI agents, native apps and systems tools in France.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070a12"/>
+      <stop offset="1" stop-color="#0d1424"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#dfe7ff"/>
+      <stop offset="1" stop-color="#8fd8bc"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2b5cf0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2b5cf0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f48271" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f48271" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="scrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#070a12" stop-opacity="0.75"/>
+      <stop offset="0.45" stop-color="#070a12" stop-opacity="0.35"/>
+      <stop offset="0.62" stop-color="#070a12" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="stripes">
+      <path d="M900 -20 L1010 -20 L700 460 L590 460 Z"/>
+      <path d="M1030 -20 L1140 -20 L830 460 L720 460 Z"/>
+      <path d="M1160 -20 L1270 -20 L960 460 L850 460 Z"/>
+    </clipPath>
+    <clipPath id="frame"><rect width="1200" height="440" rx="18"/></clipPath>
+    <clipPath id="reveal"><rect class="revealRect" x="60" y="70" width="760" height="190"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .gridpan { animation: pan 18s linear infinite; }
+    @keyframes pan { to { transform: translate(-40px, -40px); } }
+    .glowA { transform-box: fill-box; transform-origin: center; animation: drift 14s ease-in-out infinite; }
+    .glowB { transform-box: fill-box; transform-origin: center; animation: drift 17s ease-in-out infinite reverse; }
+    @keyframes drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-60px,30px) scale(1.15); } }
+    .stripe { transform-box: view-box; animation: stripeIn 1.4s cubic-bezier(.16,1,.3,1) both; }
+    .s2 { animation-delay: .12s; } .s3 { animation-delay: .24s; }
+    @keyframes stripeIn { from { transform: translate(260px,-420px); } to { transform: translate(0,0); } }
+    .sheen { animation: sheen 6s ease-in-out 1.6s infinite; }
+    @keyframes sheen { 0% { transform: translate(0,0); } 40%,100% { transform: translate(800px,0); } }
+    .revealRect { animation: reveal 1.3s cubic-bezier(.65,0,.35,1) .35s both; }
+    @keyframes reveal { from { transform: translateX(-760px); } to { transform: translateX(0); } }
+    .fadeUp { animation: fadeUp .9s cubic-bezier(.16,1,.3,1) both; }
+    .f1 { animation-delay: 1.2s; } .f2 { animation-delay: 1.45s; } .f3 { animation-delay: 1.7s; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .phrase { opacity: 0; animation: cycle 16s ease-in-out infinite; }
+    .p2 { animation-delay: 4s; } .p3 { animation-delay: 8s; } .p4 { animation-delay: 12s; }
+    @keyframes cycle { 0% { opacity: 0; transform: translateY(10px); } 3%,22% { opacity: 1; transform: translateY(0); } 25%,100% { opacity: 0; transform: translateY(-10px); } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .dot { animation: pulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+    .spark { animation: spark 7s linear infinite; }
+    .k2 { animation-delay: -2.3s; } .k3 { animation-delay: -4.6s; }
+    @keyframes spark { 0% { transform: translate(0,0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translate(-330px,560px); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .phrase { opacity: 0; } .p1 { opacity: 1; }
+    }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="440" fill="url(#bg)"/>
+    <g class="gridpan"><rect width="1280" height="520" fill="url(#grid)"/></g>
+    <ellipse class="glowA" cx="980" cy="120" rx="420" ry="300" fill="url(#glowA)"/>
+    <ellipse class="glowB" cx="1080" cy="420" rx="300" ry="220" fill="url(#glowB)"/>
+
+    <!-- brand stripes -->
+    <g>
+      <path class="stripe" d="M900 -20 L1010 -20 L700 460 L590 460 Z" fill="#2b5cf0"/>
+      <path class="stripe s2" d="M1030 -20 L1140 -20 L830 460 L720 460 Z" fill="#8fd8bc"/>
+      <path class="stripe s3" d="M1160 -20 L1270 -20 L960 460 L850 460 Z" fill="#f48271"/>
+      <g clip-path="url(#stripes)"><path class="sheen" d="M600 -20 L660 -20 L350 460 L290 460 Z" fill="#ffffff" fill-opacity="0.35"/></g>
+    </g>
+    <circle class="spark" cx="1110" cy="-30" r="3" fill="#ffffff"/>
+    <circle class="spark k2" cx="980" cy="-30" r="2" fill="#ffffff"/>
+    <circle class="spark k3" cx="1240" cy="-30" r="2.5" fill="#ffffff"/>
+
+    <!-- dark scrim behind text for legibility -->
+    <rect x="0" y="0" width="1200" height="440" fill="url(#scrim)"/>
+
+    <!-- name -->
+    <g clip-path="url(#reveal)">
+      <text class="sans" x="64" y="160" font-size="96" font-weight="800" letter-spacing="-3" fill="url(#name)">Rémi</text>
+      <text class="sans" x="64" y="252" font-size="96" font-weight="800" letter-spacing="-3" fill="url(#name)">Pelloux</text>
+    </g>
+
+    <g class="fadeUp f1">
+      <circle class="dot" cx="74" cy="296" r="6" fill="#8fd8bc"/>
+      <text class="sans" x="90" y="303" font-size="22" font-weight="600" fill="#e8eefc">CTO at OpenPro <tspan fill="#7c8aa5" font-weight="400">· France</tspan></text>
+    </g>
+
+    <!-- rotating terminal line -->
+    <g class="fadeUp f2 mono" font-size="19">
+      <rect x="64" y="326" width="560" height="44" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.09"/>
+      <text x="82" y="354" fill="#8fd8bc">~$</text>
+      <g fill="#dfe7ff">
+        <text class="phrase p1" x="116" y="354">building AI coding workspaces<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
+        <text class="phrase p2" x="116" y="354">shipping local-first native apps<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
+        <text class="phrase p3" x="116" y="354">writing Rust systems tools<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
+        <text class="phrase p4" x="116" y="354">leading engineering at OpenPro<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
+      </g>
+    </g>
+
+    <g class="fadeUp f3 sans" font-size="14" font-weight="600" letter-spacing="1.5">
+      <rect x="64" y="392" width="10" height="10" rx="2" fill="#8fd8bc"/>
+      <text x="82" y="402" fill="#9fb0cc">AI SYSTEMS</text>
+      <rect x="196" y="392" width="10" height="10" rx="2" fill="#f48271"/>
+      <text x="214" y="402" fill="#9fb0cc">NATIVE APPS</text>
+      <rect x="340" y="392" width="10" height="10" rx="2" fill="#6f8ff7"/>
+      <text x="358" y="402" fill="#9fb0cc">DEVELOPER TOOLS</text>
+    </g>
+  </g>
+</svg>
