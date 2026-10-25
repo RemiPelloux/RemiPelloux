@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="400" viewBox="0 0 590 400" role="img" aria-labelledby="t d">
+  <title id="t">android-hid-kb, phone as a USB keyboard</title>
+  <desc id="d">Animated illustration: a rooted Android phone connected by USB acts as a hardware HID keyboard and types a text file into a PC console, with the labels configfs and f_hid.</desc>
+  <defs>
+    <linearGradient id="hbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1016"/>
+      <stop offset="1" stop-color="#101a12"/>
+    </linearGradient>
+    <radialGradient id="hglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8fd8bc" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8fd8bc" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="hframe"><rect width="590" height="400" rx="18"/></clipPath>
+    <clipPath id="tl1"><rect x="0" y="-14" width="230" height="20"/></clipPath>
+    <clipPath id="tl2"><rect x="0" y="-14" width="230" height="20"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-variant-ligatures: none; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .hglow { transform-box: fill-box; transform-origin: center; animation: hbreathe 6s ease-in-out infinite; }
+    @keyframes hbreathe { 0%,100% { opacity: .6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+    .byte { opacity: 0; transform-box: fill-box; animation: byte 3s linear infinite; }
+    .b2 { animation-delay: 1s; } .b3 { animation-delay: 2s; }
+    @keyframes byte { 0% { opacity: 0; transform: translateX(0); } 10% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; transform: translateX(150px); } }
+    .key { transform-box: fill-box; transform-origin: center; animation: key 0.9s ease-in-out infinite; }
+    @keyframes key { 0%,100% { fill: #16241b; } 50% { fill: #2f5a42; } }
+    .t1 { animation: t1 6s steps(24) infinite; transform: translateX(-230px); }
+    .t2 { animation: t2 6s steps(20) infinite; transform: translateX(-230px); }
+    @keyframes t1 { 0% { transform: translateX(-230px); } 30%,100% { transform: translateX(0); } }
+    @keyframes t2 { 0%,40% { transform: translateX(-230px); } 72%,100% { transform: translateX(0); } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .t1, .t2 { transform: none; } .byte { opacity: 1; transform: none; }
+    }
+  </style>
+  <g clip-path="url(#hframe)">
+    <rect width="590" height="400" fill="url(#hbg)"/>
+    <ellipse class="hglow" cx="120" cy="210" rx="200" ry="200" fill="url(#hglow)"/>
+
+    <g class="sans">
+      <text x="34" y="52" font-size="12" font-weight="700" letter-spacing="2" fill="#8fd8bc">ROOTED ANDROID · USB HID</text>
+      <text x="34" y="84" font-size="27" font-weight="800" fill="#ffffff">android-hid-kb</text>
+    </g>
+
+    <!-- phone -->
+    <g transform="translate(40 120)">
+      <rect width="150" height="250" rx="22" fill="#0d1712" stroke="#8fd8bc" stroke-opacity="0.35" stroke-width="2"/>
+      <rect x="14" y="18" width="122" height="190" rx="8" fill="#08120c"/>
+      <circle cx="75" cy="230" r="9" fill="#16241b" stroke="#2f5a42"/>
+      <text class="mono" x="26" y="42" font-size="10" fill="#6f9a86">root@phone #</text>
+      <!-- on-screen keys -->
+      <g transform="translate(26 58)">
+        <rect class="key" width="26" height="22" rx="4"/>
+        <rect class="key" x="32" width="26" height="22" rx="4" style="animation-delay:.3s"/>
+        <rect class="key" x="64" width="26" height="22" rx="4" style="animation-delay:.6s"/>
+        <rect class="key" y="28" width="58" height="22" rx="4" style="animation-delay:.45s"/>
+        <rect class="key" x="64" y="28" width="26" height="22" rx="4" style="animation-delay:.15s"/>
+      </g>
+      <text class="mono" x="26" y="150" font-size="9" fill="#5f8a76">configfs</text>
+      <text class="mono" x="26" y="168" font-size="9" fill="#5f8a76">g_hid / f_hid</text>
+      <text class="mono" x="26" y="186" font-size="9" fill="#5f8a76">mksh builtins</text>
+    </g>
+
+    <!-- USB cable with bytes -->
+    <g transform="translate(190 236)">
+      <line x1="0" y1="0" x2="130" y2="0" stroke="#2f5a42" stroke-width="3"/>
+      <g class="mono" font-size="12" fill="#8fd8bc">
+        <text class="byte" x="0" y="-6">1c</text>
+        <text class="byte b2" x="0" y="-6">04</text>
+        <text class="byte b3" x="0" y="-6">0d</text>
+      </g>
+    </g>
+
+    <!-- PC console -->
+    <g transform="translate(320 120)">
+      <rect width="236" height="250" rx="12" fill="#0f0e22" stroke="#ffffff" stroke-opacity="0.1"/>
+      <rect width="236" height="30" rx="12" fill="#16142f"/>
+      <rect y="18" width="236" height="12" fill="#16142f"/>
+      <circle cx="18" cy="15" r="5" fill="#f48271"/><circle cx="36" cy="15" r="5" fill="#f5c26b"/><circle cx="54" cy="15" r="5" fill="#8fd8bc"/>
+      <text class="mono" x="72" y="20" font-size="11" fill="#8c88b8">host · no driver</text>
+      <g class="mono" font-size="13" transform="translate(18 62)">
+        <g transform="translate(0 0)" clip-path="url(#tl1)"><text y="0"><tspan fill="#8fd8bc">$</tspan><tspan fill="#e9e6ff"> cat payload.txt | hid</tspan></text></g>
+        <g transform="translate(0 30)" clip-path="url(#tl2)"><text y="0" fill="#c9c4ee">typed as a keyboard ✓</text></g>
+        <rect class="caret" x="0" y="46" width="2" height="16" fill="#8fd8bc"/>
+      </g>
+      <g class="sans" transform="translate(18 180)" font-size="11" fill="#8c88b8">
+        <text y="0">✓ any text file → keystrokes</text>
+        <text y="20">✓ console or desktop target</text>
+        <text y="40">✓ no app on the host side</text>
+      </g>
+    </g>
+  </g>
+</svg>

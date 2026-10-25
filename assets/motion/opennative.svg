@@ -41,7 +41,7 @@
     <ellipse class="glow" cx="210" cy="250" rx="260" ry="180" fill="url(#glow)"/>
 
     <g class="sans">
-      <text x="36" y="52" font-size="12" font-weight="700" letter-spacing="2.2" fill="#f48271">ANDROID · HANDHELD · v1.6</text>
+      <text x="36" y="52" font-size="12" font-weight="700" letter-spacing="2.2" fill="#f48271">ANDROID · HANDHELD RUNTIME</text>
       <text x="36" y="96" font-size="38" font-weight="800" letter-spacing="-1" fill="#ffffff">OpenNative</text>
       <text x="36" y="126" font-size="16" fill="#e0b9b1">PC games on Android handhelds.</text>
     </g>

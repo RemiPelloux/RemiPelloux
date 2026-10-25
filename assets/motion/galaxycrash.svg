@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="400" viewBox="0 0 590 400" role="img" aria-labelledby="t d">
+  <title id="t">GalaxyCrash, ephemeral root for Samsung Galaxy</title>
+  <desc id="d">Animated illustration: a Samsung Galaxy phone gains a temporary root shell when a lock opens, then a reboot arrow resets it, showing the root is ephemeral and undone by a reboot.</desc>
+  <defs>
+    <linearGradient id="gbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#140a16"/>
+      <stop offset="1" stop-color="#1a0f10"/>
+    </linearGradient>
+    <radialGradient id="gglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f48271" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#f48271" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="gframe"><rect width="590" height="400" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-variant-ligatures: none; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .gglow { transform-box: fill-box; transform-origin: center; animation: gbreathe 6s ease-in-out infinite; }
+    @keyframes gbreathe { 0%,100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+    .shackle { transform-box: fill-box; transform-origin: 50% 100%; animation: shackle 8s ease-in-out infinite; }
+    @keyframes shackle { 0%,8% { transform: translateY(0) rotate(0); } 18%,58% { transform: translateX(-6px) rotate(-34deg); } 72%,100% { transform: translateY(0) rotate(0); } }
+    .rooted { opacity: 0; animation: rooted 8s ease infinite; }
+    @keyframes rooted { 0%,16% { opacity: 0; } 24%,56% { opacity: 1; } 66%,100% { opacity: 0; } }
+    .locked { opacity: 1; animation: locked 8s ease infinite; }
+    @keyframes locked { 0%,12% { opacity: 1; } 20%,66% { opacity: 0; } 76%,100% { opacity: 1; } }
+    .reboot { opacity: 0; transform-box: fill-box; transform-origin: center; animation: reboot 8s ease infinite; }
+    @keyframes reboot { 0%,57% { opacity: 0; transform: rotate(0); } 61% { opacity: 1; } 70% { opacity: 1; transform: rotate(320deg); } 77%,100% { opacity: 0; transform: rotate(360deg); } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .shackle { transform: translateX(-6px) rotate(-34deg); } .rooted { opacity: 1; } .locked, .reboot { opacity: 0; }
+    }
+  </style>
+  <g clip-path="url(#gframe)">
+    <rect width="590" height="400" fill="url(#gbg)"/>
+    <ellipse class="gglow" cx="300" cy="210" rx="260" ry="220" fill="url(#gglow)"/>
+
+    <g class="sans">
+      <text x="34" y="52" font-size="12" font-weight="700" letter-spacing="2" fill="#f48271">SAMSUNG GALAXY · STABILITY FORK</text>
+      <text x="34" y="84" font-size="28" font-weight="800" fill="#ffffff">GalaxyCrash</text>
+    </g>
+
+    <!-- phone -->
+    <g transform="translate(70 118)">
+      <rect width="160" height="256" rx="24" fill="#120a14" stroke="#f48271" stroke-opacity="0.35" stroke-width="2"/>
+      <rect x="16" y="20" width="128" height="200" rx="8" fill="#0c070e"/>
+      <circle cx="80" cy="240" r="9" fill="#241318" stroke="#5a2f2f"/>
+
+      <!-- lock, centered on screen -->
+      <g transform="translate(80 104)">
+        <!-- shackle -->
+        <path class="shackle" d="M-20 0 V-16 a20 20 0 0 1 40 0 V0" fill="none" stroke="#f5c26b" stroke-width="7" stroke-linecap="round"/>
+        <rect x="-28" y="0" width="56" height="44" rx="8" fill="#241318" stroke="#f5c26b" stroke-width="3"/>
+        <g class="locked"><circle cy="20" r="5" fill="#f5c26b"/><rect x="-2" y="20" width="4" height="12" fill="#f5c26b"/></g>
+        <g class="rooted"><text x="0" y="26" font-size="16" font-weight="800" text-anchor="middle" fill="#8fd8bc" class="mono">#</text></g>
+      </g>
+
+      <!-- rooted shell line -->
+      <g class="rooted mono" transform="translate(30 168)" font-size="11">
+        <text y="0" fill="#8fd8bc">galaxy:/ # id</text>
+        <text y="18" fill="#bfe9e2">uid=0(root)<tspan class="caret" fill="#8fd8bc">_</tspan></text>
+      </g>
+    </g>
+
+    <!-- reboot-to-undo -->
+    <g transform="translate(300 150)">
+      <g transform="translate(90 70)">
+        <path class="reboot" d="M0 -34 A34 34 0 1 1 -24 -24" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+        <path class="reboot" d="M0 -34 l-12 -4 l6 14 z" fill="#38bdf8"/>
+      </g>
+      <g class="sans">
+        <text x="0" y="0" font-size="20" font-weight="800" fill="#ffffff">Ephemeral root</text>
+        <text x="0" y="30" font-size="15" fill="#e3b7b0">Granted in memory.</text>
+        <text x="0" y="54" font-size="15" fill="#e3b7b0">Reboot to undo.</text>
+      </g>
+      <g class="sans" transform="translate(0 150)" font-size="12" fill="#b88">
+        <text y="0">✓ nothing written to system</text>
+        <text y="22">✓ stability fork of DirtyFrag</text>
+        <text y="44">✓ for research on your own device</text>
+      </g>
+    </g>
+  </g>
+</svg>

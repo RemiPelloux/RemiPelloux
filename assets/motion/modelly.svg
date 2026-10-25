@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+  <title id="t">Modelly, agent-based modeling for Python</title>
+  <desc id="d">Animated illustration: typed agents move across a simulation grid and a network, while a data-collection chart draws a line, next to the Modelly name and the words typed scenarios and seeded reproducible runs.</desc>
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131a"/>
+      <stop offset="1" stop-color="#0c1026"/>
+    </linearGradient>
+    <radialGradient id="mglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <clipPath id="mframe"><rect width="1200" height="420" rx="18"/></clipPath>
+    <clipPath id="chartClip"><rect x="0" y="0" width="300" height="150"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-variant-ligatures: none; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .mglow { transform-box: fill-box; transform-origin: center; animation: mbreathe 7s ease-in-out infinite; }
+    @keyframes mbreathe { 0%,100% { opacity: .6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.1); } }
+    .ag { transform-box: fill-box; transform-origin: center; }
+    .a1 { animation: a1 8s ease-in-out infinite; }
+    .a2 { animation: a2 8s ease-in-out infinite; }
+    .a3 { animation: a3 8s ease-in-out infinite; }
+    .a4 { animation: a4 8s ease-in-out infinite; }
+    .a5 { animation: a5 8s ease-in-out infinite; }
+    @keyframes a1 { 0%,100% { transform: translate(0,0); } 25% { transform: translate(54px,0); } 50% { transform: translate(54px,54px); } 75% { transform: translate(0,54px); } }
+    @keyframes a2 { 0%,100% { transform: translate(0,0); } 30% { transform: translate(-54px,54px); } 60% { transform: translate(0,108px); } }
+    @keyframes a3 { 0%,100% { transform: translate(0,0); } 33% { transform: translate(0,-54px); } 66% { transform: translate(-54px,-54px); } }
+    @keyframes a4 { 0%,100% { transform: translate(0,0); } 40% { transform: translate(54px,-54px); } 80% { transform: translate(108px,0); } }
+    @keyframes a5 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-108px,0); } }
+    .pulse { animation: pulse 4s ease-in-out infinite; }
+    .p2 { animation-delay: 1.3s; } .p3 { animation-delay: 2.6s; }
+    @keyframes pulse { 0%,100% { stroke-opacity: .15; } 50% { stroke-opacity: .7; } }
+    .draw { stroke-dasharray: 360; stroke-dashoffset: 360; animation: draw 8s ease-in-out infinite; }
+    @keyframes draw { 0% { stroke-dashoffset: 360; } 55%,90% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+    .dot { opacity: 0; animation: dot 8s ease-in-out infinite; }
+    @keyframes dot { 0%,52% { opacity: 0; } 56%,90% { opacity: 1; } 100% { opacity: 0; } }
+    .chip { opacity: 0; animation: chip 8s ease infinite; }
+    .c1 { animation-delay: .2s; } .c2 { animation-delay: .5s; }
+    @keyframes chip { 0%,3% { opacity: 0; transform: translateX(-8px); } 10%,100% { opacity: 1; transform: translateX(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .draw { stroke-dashoffset: 0; } .dot, .chip { opacity: 1; }
+    }
+  </style>
+  <g clip-path="url(#mframe)">
+    <rect width="1200" height="420" fill="url(#mbg)"/>
+    <ellipse class="mglow" cx="250" cy="220" rx="320" ry="260" fill="url(#mglow)"/>
+
+    <!-- copy -->
+    <g class="sans">
+      <text x="56" y="62" font-size="13" font-weight="700" letter-spacing="2.5" fill="#2dd4bf">PYTHON · AGENT-BASED MODELING</text>
+      <text x="56" y="114" font-size="48" font-weight="800" letter-spacing="-1.5" fill="#ffffff">Modelly</text>
+      <text x="56" y="148" font-size="20" fill="#bfe9e2">Typed scenarios. Seeded runs.</text>
+      <text x="56" y="174" font-size="20" fill="#bfe9e2">Fast by construction.</text>
+      <g class="sans" transform="translate(56 214)" font-size="13" fill="#8fb8b4">
+        <g class="chip c1"><rect width="150" height="30" rx="8" fill="#0f2430" stroke="#2dd4bf" stroke-opacity="0.35"/><text x="14" y="20" fill="#bfe9e2">grids · networks · space</text></g>
+        <g class="chip c2" transform="translate(0 40)"><rect width="150" height="30" rx="8" fill="#0f2430" stroke="#38bdf8" stroke-opacity="0.35"/><text x="14" y="20" fill="#bfe9e2">pandas data collection</text></g>
+      </g>
+      <text class="mono" x="56" y="326" font-size="13" fill="#6f9a96">from mesa → modelly · codemod</text>
+    </g>
+
+    <!-- simulation grid -->
+    <g transform="translate(470 54)">
+      <rect width="320" height="320" rx="14" fill="#08161d" stroke="#ffffff" stroke-opacity="0.08"/>
+      <g stroke="#2dd4bf" stroke-opacity="0.12">
+        <path d="M54 8 V312 M108 8 V312 M162 8 V312 M216 8 V312 M270 8 V312"/>
+        <path d="M8 54 H312 M8 108 H312 M8 162 H312 M8 216 H312 M8 270 H312"/>
+      </g>
+      <!-- network edges between agents -->
+      <g stroke-width="2" fill="none">
+        <line class="pulse" x1="54" y1="54" x2="162" y2="108" stroke="#38bdf8"/>
+        <line class="pulse p2" x1="162" y1="108" x2="108" y2="216" stroke="#2dd4bf"/>
+        <line class="pulse p3" x1="216" y1="54" x2="270" y2="162" stroke="#a78bfa"/>
+      </g>
+      <!-- agents -->
+      <g>
+        <circle class="ag a1" cx="54" cy="54" r="9" fill="#2dd4bf"/>
+        <circle class="ag a2" cx="162" cy="108" r="9" fill="#38bdf8"/>
+        <circle class="ag a3" cx="108" cy="216" r="9" fill="#8fd8bc"/>
+        <circle class="ag a4" cx="216" cy="54" r="9" fill="#a78bfa"/>
+        <circle class="ag a5" cx="270" cy="162" r="9" fill="#f5c26b"/>
+      </g>
+    </g>
+
+    <!-- data collection chart -->
+    <g transform="translate(830 54)">
+      <rect width="320" height="320" rx="14" fill="#0f0e22" stroke="#ffffff" stroke-opacity="0.08"/>
+      <text class="mono" x="20" y="34" font-size="13" fill="#8c88b8">model.collect() → DataFrame</text>
+      <g transform="translate(20 70)">
+        <line x1="0" y1="150" x2="300" y2="150" stroke="#ffffff" stroke-opacity="0.12"/>
+        <line x1="0" y1="0" x2="0" y2="150" stroke="#ffffff" stroke-opacity="0.12"/>
+        <g clip-path="url(#chartClip)">
+          <polyline class="draw" points="0,140 40,120 80,128 120,86 160,92 200,52 240,60 280,24 300,18" fill="none" stroke="url(#mline)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        </g>
+        <circle class="dot" cx="300" cy="18" r="5" fill="#2dd4bf"/>
+      </g>
+      <g class="sans" transform="translate(20 258)" font-size="12" fill="#8c88b8">
+        <text y="0">✓ discrete-event scheduler</text>
+        <text y="22">✓ numpy-backed agents</text>
+        <text y="44">✓ reproducible from a seed</text>
+      </g>
+    </g>
+  </g>
+</svg>

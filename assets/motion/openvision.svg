@@ -63,7 +63,7 @@
 
     <!-- copy -->
     <g class="sans">
-      <text x="56" y="62" font-size="13" font-weight="700" letter-spacing="2.5" fill="#a78bfa">LATEST PROJECT · v0.2 PREVIEW</text>
+      <text x="56" y="62" font-size="13" font-weight="700" letter-spacing="2.5" fill="#a78bfa">LATEST PROJECT · DEVELOPMENT PREVIEW</text>
       <text x="56" y="112" font-size="48" font-weight="800" letter-spacing="-1.5" fill="#ffffff">OpenVision</text>
       <text x="56" y="146" font-size="20" fill="#c9c4ee">Your projects. Your models.</text>
       <text x="56" y="172" font-size="20" fill="#c9c4ee">Your workflow.</text>

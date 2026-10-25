@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+  <title id="t">deal-club.fun, a real-estate card game PWA</title>
+  <desc id="d">Animated illustration: property cards are dealt into a fan next to a price deal chip and a small city skyline, for deal-club.fun, an installable French real-estate card game that runs offline against local AI opponents.</desc>
+  <defs>
+    <linearGradient id="dbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#101a2e"/>
+    </linearGradient>
+    <radialGradient id="dglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f5c26b" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#f5c26b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dcard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2540"/>
+      <stop offset="1" stop-color="#141c33"/>
+    </linearGradient>
+    <clipPath id="dframe"><rect width="1200" height="420" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .dglow { transform-box: fill-box; transform-origin: center; animation: dbreathe 7s ease-in-out infinite; }
+    @keyframes dbreathe { 0%,100% { opacity: .6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.1); } }
+    .deal { transform-box: fill-box; transform-origin: 50% 120%; opacity: 0; }
+    .d1 { animation: d1 7s ease-out infinite; }
+    .d2 { animation: d2 7s ease-out infinite; }
+    .d3 { animation: d3 7s ease-out infinite; }
+    .d4 { animation: d4 7s ease-out infinite; }
+    @keyframes d1 { 0% { opacity: 0; transform: translateX(260px) rotate(0); } 12%,100% { opacity: 1; transform: translateX(0) rotate(-18deg); } }
+    @keyframes d2 { 0%,8% { opacity: 0; transform: translateX(260px) rotate(0); } 22%,100% { opacity: 1; transform: translateX(0) rotate(-6deg); } }
+    @keyframes d3 { 0%,16% { opacity: 0; transform: translateX(260px) rotate(0); } 32%,100% { opacity: 1; transform: translateX(0) rotate(6deg); } }
+    @keyframes d4 { 0%,24% { opacity: 0; transform: translateX(260px) rotate(0); } 42%,100% { opacity: 1; transform: translateX(0) rotate(18deg); } }
+    .chipPop { transform-box: fill-box; transform-origin: center; opacity: 0; animation: chipPop 7s ease infinite; }
+    @keyframes chipPop { 0%,48% { opacity: 0; transform: scale(.6); } 56%,90% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+    .win { opacity: 0; animation: win 7s ease infinite; }
+    @keyframes win { 0%,60% { opacity: 0; } 68%,92% { opacity: 1; } 100% { opacity: 0; } }
+    .chip { opacity: 0; animation: chipIn 7s ease infinite; }
+    .c1 { animation-delay: .2s; } .c2 { animation-delay: .45s; }
+    @keyframes chipIn { 0%,3% { opacity: 0; transform: translateX(-8px); } 10%,100% { opacity: 1; transform: translateX(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .deal, .chipPop, .win, .chip { opacity: 1; }
+      .d1 { transform: rotate(-18deg); } .d2 { transform: rotate(-6deg); } .d3 { transform: rotate(6deg); } .d4 { transform: rotate(18deg); }
+    }
+  </style>
+  <g clip-path="url(#dframe)">
+    <rect width="1200" height="420" fill="url(#dbg)"/>
+    <ellipse class="dglow" cx="900" cy="220" rx="340" ry="280" fill="url(#dglow)"/>
+
+    <!-- copy -->
+    <g class="sans">
+      <text x="56" y="62" font-size="13" font-weight="700" letter-spacing="2.5" fill="#f5c26b">LIVE PWA · JEU DE CARTES IMMOBILIER</text>
+      <text x="56" y="114" font-size="48" font-weight="800" letter-spacing="-1.5" fill="#ffffff">deal-club<tspan fill="#f5c26b">.fun</tspan></text>
+      <text x="56" y="150" font-size="20" fill="#c7d2ec">Build your property empire,</text>
+      <text x="56" y="176" font-size="20" fill="#c7d2ec">one deal at a time.</text>
+      <g class="sans" transform="translate(56 216)" font-size="13">
+        <g class="chip c1"><rect width="176" height="30" rx="8" fill="#17213a" stroke="#f5c26b" stroke-opacity="0.35"/><text x="14" y="20" fill="#c7d2ec">installable · plays offline</text></g>
+        <g class="chip c2" transform="translate(0 40)"><rect width="176" height="30" rx="8" fill="#17213a" stroke="#38bdf8" stroke-opacity="0.35"/><text x="14" y="20" fill="#c7d2ec">local AI opponents</text></g>
+      </g>
+      <text x="56" y="326" font-size="13" fill="#7f8db0">58 illustrations SVG originales · en français</text>
+    </g>
+
+    <!-- skyline backdrop -->
+    <g transform="translate(640 250)" fill="#1a2440">
+      <rect x="0" y="-60" width="38" height="120" rx="3"/>
+      <rect x="48" y="-100" width="40" height="160" rx="3"/>
+      <rect x="98" y="-40" width="34" height="100" rx="3"/>
+      <rect x="142" y="-130" width="44" height="190" rx="3"/>
+      <rect x="196" y="-70" width="38" height="130" rx="3"/>
+      <rect x="244" y="-110" width="42" height="170" rx="3"/>
+      <rect x="296" y="-50" width="36" height="110" rx="3"/>
+    </g>
+
+    <!-- dealt card fan -->
+    <g transform="translate(830 230)">
+      <g class="deal d1"><g transform="translate(-150 0)">
+        <rect x="-55" y="-78" width="110" height="156" rx="12" fill="url(#dcard)" stroke="#f48271" stroke-opacity="0.5"/>
+        <rect x="-40" y="-62" width="80" height="54" rx="6" fill="#2a3450"/>
+        <path d="M-30 -14 l30 -26 l30 26 v8 h-60 z" fill="#f48271"/>
+        <text y="38" text-anchor="middle" class="sans" font-size="12" fill="#c7d2ec">Studio</text>
+        <text y="58" text-anchor="middle" class="sans" font-size="13" font-weight="800" fill="#f5c26b">120 k€</text>
+      </g></g>
+      <g class="deal d2"><g transform="translate(-50 0)">
+        <rect x="-55" y="-78" width="110" height="156" rx="12" fill="url(#dcard)" stroke="#8fd8bc" stroke-opacity="0.5"/>
+        <rect x="-40" y="-62" width="80" height="54" rx="6" fill="#2a3450"/>
+        <path d="M-32 -14 l32 -28 l32 28 v8 h-64 z" fill="#8fd8bc"/>
+        <text y="38" text-anchor="middle" class="sans" font-size="12" fill="#c7d2ec">Maison</text>
+        <text y="58" text-anchor="middle" class="sans" font-size="13" font-weight="800" fill="#f5c26b">340 k€</text>
+      </g></g>
+      <g class="deal d3"><g transform="translate(50 0)">
+        <rect x="-55" y="-78" width="110" height="156" rx="12" fill="url(#dcard)" stroke="#38bdf8" stroke-opacity="0.5"/>
+        <rect x="-40" y="-62" width="80" height="54" rx="6" fill="#2a3450"/>
+        <path d="M-34 -14 l0 -30 h68 v30 z M-34 -14 l34 -24 l34 24" fill="none" stroke="#38bdf8" stroke-width="3"/>
+        <text y="38" text-anchor="middle" class="sans" font-size="12" fill="#c7d2ec">Immeuble</text>
+        <text y="58" text-anchor="middle" class="sans" font-size="13" font-weight="800" fill="#f5c26b">1.2 M€</text>
+      </g></g>
+      <g class="deal d4"><g transform="translate(150 0)">
+        <rect x="-55" y="-78" width="110" height="156" rx="12" fill="url(#dcard)" stroke="#a78bfa" stroke-opacity="0.5"/>
+        <rect x="-40" y="-62" width="80" height="54" rx="6" fill="#2a3450"/>
+        <circle cy="-34" r="20" fill="none" stroke="#a78bfa" stroke-width="3"/><text y="-28" text-anchor="middle" class="sans" font-size="20" font-weight="800" fill="#a78bfa">%</text>
+        <text y="38" text-anchor="middle" class="sans" font-size="12" fill="#c7d2ec">Enchère</text>
+        <text y="58" text-anchor="middle" class="sans" font-size="13" font-weight="800" fill="#f5c26b">+15%</text>
+      </g></g>
+
+      <!-- deal chip -->
+      <g class="chipPop" transform="translate(0 -140)">
+        <circle r="34" fill="#f5c26b"/>
+        <circle r="26" fill="none" stroke="#0b1020" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="4 6"/>
+        <text y="6" text-anchor="middle" class="sans" font-size="15" font-weight="800" fill="#0b1020">DEAL</text>
+      </g>
+      <text class="win sans" x="0" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#8fd8bc">Portefeuille +1 ✓</text>
+    </g>
+  </g>
+</svg>

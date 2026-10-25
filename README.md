@@ -1,5 +1,5 @@
 <a href="https://www.linkedin.com/in/remipelloux/">
-  <img src="./assets/motion/hero.svg" alt="Rémi Pelloux, CTO at OpenPro in France. Building AI coding workspaces, local-first native apps, Rust systems tools, and leading engineering at OpenPro." width="100%" />
+  <img src="./assets/motion/hero.svg" alt="Rémi Pelloux, CTO at OpenPro in France. Building AI coding workspaces, agent-based modeling for Python, local-first native apps, Rust systems tools, Android research tooling, and leading engineering at OpenPro." width="100%" />
 </a>
 
 <br />
@@ -13,18 +13,20 @@
 
 <p align="center">
   <a href="#openvision">OpenVision</a> &nbsp;·&nbsp;
+  <a href="#modelly">Modelly</a> &nbsp;·&nbsp;
   <a href="#open-source">Open source</a> &nbsp;·&nbsp;
+  <a href="#live">Live apps</a> &nbsp;·&nbsp;
   <a href="#at-openpro">At OpenPro</a> &nbsp;·&nbsp;
   <a href="#activity">Activity</a>
 </p>
 
-I build software that people actually run: **AI tools that work with your own models**, **native apps that keep data on your machine**, and **systems tools without hidden daemons**. During the day I lead engineering at **OpenPro**. The rest of the time I ship in public.
+I'm **Rémi Pelloux**, a software engineer and **CTO at [OpenPro](https://openpro.ai)** in France. I build software that people actually run: **AI developer tools that work with your own models**, a **Python framework for agent-based modeling**, **local-first native apps that keep data on your machine**, **systems tools written in Rust without hidden daemons**, and **Android research tooling**. During the day I lead engineering at OpenPro. The rest of the time I ship in public.
 
 <br />
 
 <a name="openvision"></a>
 
-## 👁️ Latest: OpenVision
+## 👁️ Latest: OpenVision — an AI coding workspace
 
 <a href="https://github.com/RemiPelloux/OpenVision">
   <img src="./assets/motion/openvision.svg" alt="OpenVision: an editor where an AI model suggests code that is accepted with Tab, next to a blinking eye logo and a bring-your-own model provider list." width="100%" />
@@ -37,7 +39,26 @@ I build software that people actually run: **AI tools that work with your own mo
 - **A portable Windows app.** Download the zip, extract it, and double-click to run. You don't need to set up Node or npm.
 - **Honest progress.** The roadmap tracks acceptance stories, and only the ones that pass are marked verified.
 
-[**Download v0.2.0-preview.6 →**](https://github.com/RemiPelloux/OpenVision/releases) &nbsp;·&nbsp; [Read the docs](https://github.com/RemiPelloux/OpenVision/tree/main/docs) &nbsp;·&nbsp; <sub>`Electron` `TypeScript` `MCP` · development preview, tested on Windows x64</sub>
+[**Download the latest build →**](https://github.com/RemiPelloux/OpenVision/releases) &nbsp;·&nbsp; [Read the docs](https://github.com/RemiPelloux/OpenVision/tree/main/docs) &nbsp;·&nbsp; <sub>`Electron` `TypeScript` `MCP` · development preview, tested on Windows x64</sub>
+
+<br />
+
+<a name="modelly"></a>
+
+## 🧬 Modelly — agent-based modeling for Python
+
+<a href="https://remipelloux.github.io/Modelly/">
+  <img src="./assets/motion/modelly.svg" alt="Modelly: typed agents move across a simulation grid and a network while a data-collection chart draws a line, for an agent-based modeling framework in Python with seeded reproducible runs." width="100%" />
+</a>
+
+**A framework for agent-based modeling (ABM) in Python — fast by construction.** Modelly lets you describe a population of agents and the world they live in, run the simulation, and collect the results as data you can analyze. It is built for reproducibility: scenarios are typed, and every run is seeded so you get the same numbers back.
+
+- **Typed scenarios and seeded, reproducible runs** — share a config, get identical results.
+- **numpy-backed agents** on grids, networks and continuous space, with a discrete-event scheduler.
+- **pandas data collection** out of the box, plus a browser visualization for watching a run live.
+- **A codemod path from [Mesa](https://github.com/projectmesa/mesa)**, so existing models can move over.
+
+[**Read the docs →**](https://remipelloux.github.io/Modelly/) &nbsp;·&nbsp; [Source on GitHub](https://github.com/RemiPelloux/Modelly) &nbsp;·&nbsp; <sub>`Python` `numpy` `pandas` · simulation · reproducible research</sub>
 
 <br />
 
@@ -85,11 +106,43 @@ I build software that people actually run: **AI tools that work with your own mo
   <img src="./assets/motion/containust.svg" alt="Containust: a terminal runs ctst pull, plan and run with offline mode, and an api component connects to a db component without a background daemon." width="100%" />
 </a>
 
-### [Containust](https://github.com/RemiPelloux/Containust) &nbsp;<img alt="release" src="https://img.shields.io/github/v/release/RemiPelloux/Containust?style=flat-square&color=f59e0b&labelColor=1a130b" />
+### [Containust](https://github.com/RemiPelloux/Containust) &nbsp;<img alt="release" src="https://img.shields.io/github/v/release/RemiPelloux/Containust?style=flat-square&color=f59e0b&labelColor=1a130b&label=release" />
 
 **A container runtime written in Rust, with no background daemon.** Each `ctst` command talks to the backend directly and writes file state. You describe stacks in a small declarative language (`.ctst`: `COMPONENT`, `CONNECT`, `EXPOSE`). Images are pulled by pinned digest, and `--offline` blocks network access before anything connects, so it works on air-gapped machines. On Linux it uses namespaces and cgroups v2 directly. On macOS and Windows it runs through QEMU. It also ships a Rust SDK for the parser, the graph and the runtime.
 
-<sub>`Rust` `Linux namespaces` `cgroups v2` `OCI` · GA 1.2 · source-available, commercial license</sub>
+<sub>`Rust` `Linux namespaces` `cgroups v2` `OCI` · source-available, commercial license</sub>
+
+<br />
+
+### 📱 Android research tooling
+
+<p>
+  <a href="https://github.com/RemiPelloux/android-hid-kb"><img src="./assets/motion/android-hid-kb.svg" alt="android-hid-kb: a rooted Android phone connected over USB acts as a hardware HID keyboard and types a text file into a PC console." width="49%" /></a>
+  <a href="https://github.com/RemiPelloux/GalaxyCrash"><img src="./assets/motion/galaxycrash.svg" alt="GalaxyCrash: a Samsung Galaxy phone gains a temporary root shell when a lock opens, then a reboot arrow resets it, because the root is ephemeral." width="49%" /></a>
+</p>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### [android-hid-kb](https://github.com/RemiPelloux/android-hid-kb) &nbsp;<img alt="stars" src="https://img.shields.io/github/stars/RemiPelloux/android-hid-kb?style=flat-square&color=8fd8bc&labelColor=0b1d2a&label=%E2%98%85" />
+
+**Turn a rooted Android phone into a USB hardware keyboard.** Using the Linux `configfs` gadget stack (`f_hid`) and nothing but `mksh` shell builtins, the phone presents itself to any PC as a plain keyboard and types out a text file — no app, no driver on the host side.
+
+<sub>`Android` `configfs` `USB HID` `shell` · works on a console or a desktop</sub>
+
+</td>
+<td width="50%" valign="top">
+
+### [GalaxyCrash](https://github.com/RemiPelloux/GalaxyCrash) &nbsp;<img alt="stars" src="https://img.shields.io/github/stars/RemiPelloux/GalaxyCrash?style=flat-square&color=f48271&labelColor=22110f&label=%E2%98%85" />
+
+**Ephemeral root for Samsung Galaxy devices — a stability-focused fork of DirtyFrag.** Root is granted in memory for research on your own device, and a reboot undoes it completely: nothing is written to the system partition.
+
+<sub>`Java` `Android` `security research` · reboot to undo</sub>
+
+</td>
+</tr>
+</table>
 
 <details>
 <summary><strong>More public work</strong></summary>
@@ -100,13 +153,29 @@ I build software that people actually run: **AI tools that work with your own mo
 | [**OpenSw**](https://github.com/RemiPelloux/OpenSw) | Android ARM64 Switch emulator with Vulkan rendering, per-game profiles and AYN Thor tuning | `C++` `Vulkan` |
 | [**agent-mangaka-forge**](https://github.com/RemiPelloux/agent-mangaka-forge) | AI manga-page skill pack with persistent character memory for consistent characters | `Python` |
 | [**OpenAgents**](https://github.com/RemiPelloux/OpenAgents) | Self-hosted, multi-provider AI agents with memory and MCP, forked from [Hermes Agent](https://github.com/NousResearch/Hermes-agent) | `Python` `MCP` |
+| [**steamio**](https://github.com/RemiPelloux/steamio) | Steam-style desktop game catalog, library and download manager with SQLite FTS5 search | `Tauri` `React` `Rust` |
 | [**LumaSync**](https://github.com/RemiPelloux/lumasync) | Local Philips Hue ambilight driven by fast screen capture | `Rust` `Tauri` `React` |
 | [**OpenPro Connector SDK**](https://github.com/RemiPelloux/openpro-connector-sdk) | Sync ATS jobs into OpenPro through PHP, HTTP or MCP | `PHP` |
 | [**OpenWhistle SDKs**](https://github.com/RemiPelloux/openwhistle-sdks) | OpenWhistle API clients for five languages | `JS` `Python` `PHP` `Rust` `Go` |
-| [**BurpHunterTK**](https://github.com/RemiPelloux/BurpHunterTK) | Burp Suite extension that uses LLMs to triage high-impact web vulnerabilities | `Python` |
 | [**delonghi-coffee-api**](https://github.com/RemiPelloux/delonghi-coffee-api) | Local REST API for De'Longhi machines, built on the reverse-engineered ECAM protocol | `Python` `FastAPI` |
 
 </details>
+
+<br />
+
+<a name="live"></a>
+
+## 🎴 Live apps
+
+<a href="https://deal-club.fun">
+  <img src="./assets/motion/deal-club.svg" alt="deal-club.fun: property cards are dealt into a fan next to a price deal chip and a city skyline, for an installable French real-estate card game that plays offline against local AI opponents." width="100%" />
+</a>
+
+### [deal-club.fun](https://deal-club.fun) — a real-estate card game, in your browser
+
+**Build a property empire, one deal at a time.** deal-club.fun is an installable **French real-estate card game** (PWA): you buy, trade and auction properties against **AI opponents that run entirely on your device**, so a game works offline once the page is loaded. It ships with classic card rules and **58 original hand-drawn SVG illustrations**.
+
+<sub>`TypeScript` `PWA` `offline-first` · [**Play it now →**](https://deal-club.fun)</sub>
 
 <br />
 

@@ -38,7 +38,7 @@
     <ellipse cx="470" cy="60" rx="260" ry="200" fill="url(#glow)"/>
 
     <g class="sans">
-      <text x="36" y="52" font-size="12" font-weight="700" letter-spacing="2.2" fill="#2dd4bf">AUDIO → KNOWLEDGE · v0.6</text>
+      <text x="36" y="52" font-size="12" font-weight="700" letter-spacing="2.2" fill="#2dd4bf">AUDIO → KNOWLEDGE · LOCAL-FIRST</text>
       <text x="36" y="96" font-size="38" font-weight="800" letter-spacing="-1" fill="#ffffff">OpenPlod</text>
       <text x="36" y="126" font-size="16" fill="#a9c3d6">Your recordings, as local Markdown.</text>
     </g>

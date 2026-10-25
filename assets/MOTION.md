@@ -7,7 +7,11 @@ of OpenPro's OpenCode-style CLI mascot in OpenAgents:
 - [startup_animation.py](https://github.com/RemiPelloux/OpenAgents/blob/main/openagents_cli/startup_animation.py)
 
 The waveform and light illustrate the work done by OpenPlod and LumaSync.
-These are decorative illustrations, not live processing or availability indicators.
+Later assets extend the same language: Modelly moves agents across a grid and
+a network while a data-collection chart draws; android-hid-kb streams bytes
+down a USB cable into a console; GalaxyCrash opens a lock then reboots it away;
+deal-club deals a fan of property cards. These are decorative illustrations,
+not live processing, telemetry or availability indicators.
 
 The SVGs are self-contained, with no scripts, fonts, network requests or filters.
 Motion uses only transforms and opacity with stable image dimensions.
