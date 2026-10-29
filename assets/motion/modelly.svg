@@ -62,7 +62,7 @@
         <g class="chip c1"><rect width="150" height="30" rx="8" fill="#0f2430" stroke="#2dd4bf" stroke-opacity="0.35"/><text x="14" y="20" fill="#bfe9e2">grids · networks · space</text></g>
         <g class="chip c2" transform="translate(0 40)"><rect width="150" height="30" rx="8" fill="#0f2430" stroke="#38bdf8" stroke-opacity="0.35"/><text x="14" y="20" fill="#bfe9e2">pandas data collection</text></g>
       </g>
-      <text class="mono" x="56" y="326" font-size="13" fill="#6f9a96">from mesa → modelly · codemod</text>
+      <text class="mono" x="56" y="326" font-size="13" fill="#6f9a96">model.run(seed=42) → same numbers, every run</text>
     </g>
 
     <!-- simulation grid -->

@@ -11,6 +11,20 @@
   <a href="https://github.com/RemiPelloux?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/RemiPelloux?style=for-the-badge&label=Followers&color=6f8ff7&labelColor=0b0f17" /></a>
 </p>
 
+<h3 align="center">I build software people actually run.</h3>
+<p align="center"><em>Bring-your-own-model AI tools&nbsp; ·&nbsp; local-first native apps&nbsp; ·&nbsp; Rust systems&nbsp; ·&nbsp; agent-based simulation</em></p>
+
+<p align="center">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=0b0f17" />
+  <img alt="Rust" src="https://img.shields.io/badge/Rust-DEA584?style=flat-square&logo=rust&logoColor=black&labelColor=0b0f17" />
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0b0f17" />
+  <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white&labelColor=0b0f17" />
+  <img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black&labelColor=0b0f17" />
+  <img alt="Tauri" src="https://img.shields.io/badge/Tauri-24C8DB?style=flat-square&logo=tauri&logoColor=black&labelColor=0b0f17" />
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white&labelColor=0b0f17" />
+  <img alt="AWS" src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonwebservices&logoColor=black&labelColor=0b0f17" />
+</p>
+
 <p align="center">
   <a href="#openvision">OpenVision</a> &nbsp;·&nbsp;
   <a href="#modelly">Modelly</a> &nbsp;·&nbsp;
@@ -56,7 +70,6 @@ I'm **Rémi Pelloux**, a software engineer and **CTO at [OpenPro](https://openpr
 - **Typed scenarios and seeded, reproducible runs** — share a config, get identical results.
 - **numpy-backed agents** on grids, networks and continuous space, with a discrete-event scheduler.
 - **pandas data collection** out of the box, plus a browser visualization for watching a run live.
-- **A codemod path from [Mesa](https://github.com/projectmesa/mesa)**, so existing models can move over.
 
 [**Read the docs →**](https://remipelloux.github.io/Modelly/) &nbsp;·&nbsp; [Source on GitHub](https://github.com/RemiPelloux/Modelly) &nbsp;·&nbsp; <sub>`Python` `numpy` `pandas` · simulation · reproducible research</sub>
 
