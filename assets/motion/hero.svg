@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="t d">
-  <title id="t">Rémi Pelloux, CTO at OpenPro</title>
-  <desc id="d">Animated banner: Rémi Pelloux, CTO at OpenPro. Building AI agents, native apps and systems tools in France.</desc>
+  <title id="t">Rémi Pelloux, CTO and co-founder of OpenPro</title>
+  <desc id="d">Animated banner: Rémi Pelloux, CTO at OpenPro. Orchestrating coding agents, shipping LLM agents and MCP servers, and leading engineering at OpenPro, in Nice, France.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#070a12"/>
@@ -96,7 +96,7 @@
 
     <g class="fadeUp f1">
       <circle class="dot" cx="74" cy="296" r="6" fill="#8fd8bc"/>
-      <text class="sans" x="90" y="303" font-size="22" font-weight="600" fill="#e8eefc">CTO at OpenPro <tspan fill="#7c8aa5" font-weight="400">· France</tspan></text>
+      <text class="sans" x="90" y="303" font-size="22" font-weight="600" fill="#e8eefc">CTO and co-founder, OpenPro <tspan fill="#7c8aa5" font-weight="400">· Nice, France</tspan></text>
     </g>
 
     <!-- rotating terminal line -->
@@ -104,9 +104,9 @@
       <rect x="64" y="326" width="560" height="44" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.09"/>
       <text x="82" y="354" fill="#8fd8bc">~$</text>
       <g fill="#dfe7ff">
-        <text class="phrase p1" x="116" y="354">building AI coding workspaces<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
-        <text class="phrase p2" x="116" y="354">shipping local-first native apps<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
-        <text class="phrase p3" x="116" y="354">writing Rust systems tools<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
+        <text class="phrase p1" x="116" y="354">orchestrating coding agents<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
+        <text class="phrase p2" x="116" y="354">shipping LLM agents and MCP servers<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
+        <text class="phrase p3" x="116" y="354">writing the rules AI agents follow<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
         <text class="phrase p4" x="116" y="354">leading engineering at OpenPro<tspan class="caret" fill="#8fd8bc">▍</tspan></text>
       </g>
     </g>
@@ -115,9 +115,9 @@
       <rect x="64" y="392" width="10" height="10" rx="2" fill="#8fd8bc"/>
       <text x="82" y="402" fill="#9fb0cc">AI SYSTEMS</text>
       <rect x="196" y="392" width="10" height="10" rx="2" fill="#f48271"/>
-      <text x="214" y="402" fill="#9fb0cc">NATIVE APPS</text>
-      <rect x="340" y="392" width="10" height="10" rx="2" fill="#6f8ff7"/>
-      <text x="358" y="402" fill="#9fb0cc">DEVELOPER TOOLS</text>
+      <text x="214" y="402" fill="#9fb0cc">AGENT TOOLING</text>
+      <rect x="374" y="392" width="10" height="10" rx="2" fill="#6f8ff7"/>
+      <text x="392" y="402" fill="#9fb0cc">SECURITY</text>
     </g>
   </g>
 </svg>

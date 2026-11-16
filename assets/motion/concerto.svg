@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+  <title id="t">Concerto, a terminal orchestrator for coding agents</title>
+  <desc id="d">Animated illustration: a request is split into four user stories, each story is routed to a model that fits its risk, passes tests and a review by a second model, then merges into the main branch.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c0a12"/>
+      <stop offset="1" stop-color="#16111f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f5b544" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#f5b544" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8b7cf6" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#8b7cf6" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="frame"><rect width="1200" height="420" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-variant-ligatures: none; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .flow { stroke-dasharray: 4 8; animation: flow 1s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -12; } }
+    .story { animation: story 9s cubic-bezier(.16,1,.3,1) infinite; }
+    .d1 { animation-delay: .3s; } .d2 { animation-delay: .6s; } .d3 { animation-delay: .9s; }
+    @keyframes story { 0% { opacity: 0; transform: translateX(-16px); } 6%,90% { opacity: 1; transform: translateX(0); } 97%,100% { opacity: 0; transform: translateX(0); } }
+    .route { opacity: 0; animation: route 9s ease-out infinite; }
+    .r1 { animation-delay: 1.2s; } .r2 { animation-delay: 1.5s; } .r3 { animation-delay: 1.8s; } .r4 { animation-delay: 2.1s; }
+    @keyframes route { 0% { opacity: 0; } 5%,78% { opacity: 1; } 86%,100% { opacity: 0; } }
+    .chk { opacity: 0; animation: chk 9s ease-out infinite; }
+    .c1 { animation-delay: 2.8s; } .c2 { animation-delay: 3.2s; } .c3 { animation-delay: 3.6s; } .c4 { animation-delay: 4s; }
+    .c5 { animation-delay: 3.4s; } .c6 { animation-delay: 3.8s; } .c7 { animation-delay: 4.2s; } .c8 { animation-delay: 4.6s; }
+    @keyframes chk { 0% { opacity: 0; } 4%,62% { opacity: 1; } 70%,100% { opacity: 0; } }
+    .merge { opacity: 0; animation: merge 9s ease-out 5s infinite; }
+    @keyframes merge { 0% { opacity: 0; } 5%,32% { opacity: 1; } 40%,100% { opacity: 0; } }
+    .node { transform-box: fill-box; transform-origin: center; animation: node 9s ease-in-out 5.2s infinite; }
+    @keyframes node { 0%,100% { transform: scale(1); } 4% { transform: scale(1.25); } 10% { transform: scale(1); } }
+    .baton { transform-box: fill-box; transform-origin: 0 100%; animation: baton 2.4s ease-in-out infinite; }
+    @keyframes baton { 0%,100% { transform: rotate(-14deg); } 50% { transform: rotate(14deg); } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .route, .chk, .merge { opacity: 1; }
+    }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="420" fill="url(#bg)"/>
+    <ellipse cx="900" cy="90" rx="380" ry="230" fill="url(#glow)"/>
+    <ellipse cx="160" cy="420" rx="320" ry="200" fill="url(#glow2)"/>
+
+    <!-- copy -->
+    <g class="sans">
+      <text x="56" y="66" font-size="12" font-weight="700" letter-spacing="2.2" fill="#f5b544">LATEST · ORCHESTRATOR FOR CODING AGENTS</text>
+      <text x="56" y="132" font-size="62" font-weight="800" letter-spacing="-2" fill="#ffffff">Concerto</text>
+      <text x="56" y="172" font-size="20" font-weight="600" fill="#f1ead9">Hand it the whole feature.</text>
+      <text x="56" y="200" font-size="16" fill="#b9b0c9">Stories routed to the right model, built in</text>
+      <text x="56" y="222" font-size="16" fill="#b9b0c9">worktrees, tested, reviewed by a second model.</text>
+    </g>
+
+    <!-- terminal -->
+    <g transform="translate(56 248)" class="mono" font-size="13">
+      <rect width="440" height="92" rx="12" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.09"/>
+      <text x="18" y="28" fill="#f5b544">$ <tspan fill="#f1ead9">concerto "add SSO to the admin"</tspan></text>
+      <text x="18" y="52" fill="#b9b0c9">planned 4 stories · routed to 3 models</text>
+      <text x="18" y="76" fill="#8fd8bc">merged 4/4 · tests pass · critic ok<tspan class="caret" fill="#f5b544">▍</tspan></text>
+    </g>
+
+    <g class="sans" font-size="12" font-weight="600">
+      <g transform="translate(56 360)"><rect width="100" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="50" y="18.5" text-anchor="middle" fill="#e2dcef">TypeScript</text></g>
+      <g transform="translate(164 360)"><rect width="104" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="52" y="18.5" text-anchor="middle" fill="#e2dcef">Claude Code</text></g>
+      <g transform="translate(276 360)"><rect width="70" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="35" y="18.5" text-anchor="middle" fill="#e2dcef">Codex</text></g>
+      <g transform="translate(354 360)"><rect width="76" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="38" y="18.5" text-anchor="middle" fill="#e2dcef">Ollama</text></g>
+      <g transform="translate(438 360)"><rect width="58" height="28" rx="14" fill="#f5b544" fill-opacity="0.18"/><text x="29" y="18.5" text-anchor="middle" fill="#ffd58a">MIT</text></g>
+    </g>
+
+    <!-- conductor -->
+    <g transform="translate(600 52)">
+      <path class="baton" d="M0 22 L26 0" stroke="#f5b544" stroke-width="3" stroke-linecap="round"/>
+      <text class="sans" x="40" y="20" font-size="11" font-weight="700" letter-spacing="1.8" fill="#9d93b3">STORIES</text>
+      <text class="sans" x="232" y="20" font-size="11" font-weight="700" letter-spacing="1.8" fill="#9d93b3">ROUTED TO</text>
+      <text class="sans" x="400" y="20" font-size="11" font-weight="700" letter-spacing="1.8" fill="#9d93b3">CHECKS</text>
+      <text class="sans" x="520" y="20" font-size="11" font-weight="700" letter-spacing="1.8" fill="#9d93b3">MERGE</text>
+    </g>
+
+    <!-- stories -->
+    <g class="sans">
+      <g transform="translate(600 96)"><g class="story">
+        <rect width="168" height="52" rx="10" fill="#1d1729" stroke="#f48271" stroke-opacity="0.6"/>
+        <text x="14" y="22" font-size="13" font-weight="700" fill="#f1ead9">S1 auth flow</text>
+        <rect x="14" y="32" width="140" height="6" rx="3" fill="#ffffff" fill-opacity="0.08"/>
+        <rect x="14" y="32" width="126" height="6" rx="3" fill="#f48271"/>
+      </g></g>
+      <g transform="translate(600 166)"><g class="story d1">
+        <rect width="168" height="52" rx="10" fill="#1d1729" stroke="#f5b544" stroke-opacity="0.6"/>
+        <text x="14" y="22" font-size="13" font-weight="700" fill="#f1ead9">S2 db migration</text>
+        <rect x="14" y="32" width="140" height="6" rx="3" fill="#ffffff" fill-opacity="0.08"/>
+        <rect x="14" y="32" width="98" height="6" rx="3" fill="#f5b544"/>
+      </g></g>
+      <g transform="translate(600 236)"><g class="story d2">
+        <rect width="168" height="52" rx="10" fill="#1d1729" stroke="#8b7cf6" stroke-opacity="0.6"/>
+        <text x="14" y="22" font-size="13" font-weight="700" fill="#f1ead9">S3 settings UI</text>
+        <rect x="14" y="32" width="140" height="6" rx="3" fill="#ffffff" fill-opacity="0.08"/>
+        <rect x="14" y="32" width="64" height="6" rx="3" fill="#8b7cf6"/>
+      </g></g>
+      <g transform="translate(600 306)"><g class="story d3">
+        <rect width="168" height="52" rx="10" fill="#1d1729" stroke="#8fd8bc" stroke-opacity="0.6"/>
+        <text x="14" y="22" font-size="13" font-weight="700" fill="#f1ead9">S4 copy fix</text>
+        <rect x="14" y="32" width="140" height="6" rx="3" fill="#ffffff" fill-opacity="0.08"/>
+        <rect x="14" y="32" width="22" height="6" rx="3" fill="#8fd8bc"/>
+      </g></g>
+    </g>
+
+    <!-- routes -->
+    <g fill="none" stroke-width="2">
+      <path class="flow" d="M772 122H826" stroke="#f48271"/>
+      <path class="flow" d="M772 192H826" stroke="#f5b544"/>
+      <path class="flow" d="M772 262H826" stroke="#8b7cf6"/>
+      <path class="flow" d="M772 332H826" stroke="#8fd8bc"/>
+    </g>
+    <g class="sans" font-size="13" font-weight="700">
+      <g class="route r1" transform="translate(832 106)"><rect width="128" height="32" rx="16" fill="#f48271" fill-opacity="0.18" stroke="#f48271" stroke-opacity="0.5"/><text x="64" y="21" text-anchor="middle" fill="#ffc2b8">Opus</text></g>
+      <g class="route r2" transform="translate(832 176)"><rect width="128" height="32" rx="16" fill="#f5b544" fill-opacity="0.16" stroke="#f5b544" stroke-opacity="0.5"/><text x="64" y="21" text-anchor="middle" fill="#ffd58a">Opus</text></g>
+      <g class="route r3" transform="translate(832 246)"><rect width="128" height="32" rx="16" fill="#8b7cf6" fill-opacity="0.18" stroke="#8b7cf6" stroke-opacity="0.5"/><text x="64" y="21" text-anchor="middle" fill="#cdc6ff">GPT-6.1 Sol</text></g>
+      <g class="route r4" transform="translate(832 316)"><rect width="128" height="32" rx="16" fill="#8fd8bc" fill-opacity="0.16" stroke="#8fd8bc" stroke-opacity="0.5"/><text x="64" y="21" text-anchor="middle" fill="#bff0dd">local model</text></g>
+    </g>
+
+    <!-- checks -->
+    <g class="sans" font-size="11" font-weight="700">
+      <g transform="translate(990 108)">
+        <g class="chk c1"><rect width="50" height="28" rx="7" fill="#8fd8bc" fill-opacity="0.14"/><text x="25" y="18" text-anchor="middle" fill="#8fd8bc">tests</text></g>
+        <g class="chk c5" transform="translate(56 0)"><rect width="50" height="28" rx="7" fill="#8b7cf6" fill-opacity="0.18"/><text x="25" y="18" text-anchor="middle" fill="#cdc6ff">critic</text></g>
+      </g>
+      <g transform="translate(990 178)">
+        <g class="chk c2"><rect width="50" height="28" rx="7" fill="#8fd8bc" fill-opacity="0.14"/><text x="25" y="18" text-anchor="middle" fill="#8fd8bc">tests</text></g>
+        <g class="chk c6" transform="translate(56 0)"><rect width="50" height="28" rx="7" fill="#8b7cf6" fill-opacity="0.18"/><text x="25" y="18" text-anchor="middle" fill="#cdc6ff">critic</text></g>
+      </g>
+      <g transform="translate(990 248)">
+        <g class="chk c3"><rect width="50" height="28" rx="7" fill="#8fd8bc" fill-opacity="0.14"/><text x="25" y="18" text-anchor="middle" fill="#8fd8bc">tests</text></g>
+        <g class="chk c7" transform="translate(56 0)"><rect width="50" height="28" rx="7" fill="#8b7cf6" fill-opacity="0.18"/><text x="25" y="18" text-anchor="middle" fill="#cdc6ff">critic</text></g>
+      </g>
+      <g transform="translate(990 318)">
+        <g class="chk c4"><rect width="50" height="28" rx="7" fill="#8fd8bc" fill-opacity="0.14"/><text x="25" y="18" text-anchor="middle" fill="#8fd8bc">tests</text></g>
+        <g class="chk c8" transform="translate(56 0)"><rect width="50" height="28" rx="7" fill="#8b7cf6" fill-opacity="0.18"/><text x="25" y="18" text-anchor="middle" fill="#cdc6ff">types</text></g>
+      </g>
+    </g>
+
+    <!-- merge -->
+    <g class="merge" fill="none" stroke="#f5b544" stroke-width="2" stroke-linecap="round">
+      <path d="M1100 122 C1124 122 1124 227 1140 227"/>
+      <path d="M1100 192 C1120 192 1120 227 1140 227"/>
+      <path d="M1100 262 C1120 262 1120 227 1140 227"/>
+      <path d="M1100 332 C1124 332 1124 227 1140 227"/>
+    </g>
+    <g transform="translate(1150 227)">
+      <circle class="node" r="12" fill="#f5b544"/>
+      <text class="sans" y="34" font-size="11" font-weight="700" text-anchor="middle" fill="#ffd58a">main</text>
+    </g>
+  </g>
+</svg>

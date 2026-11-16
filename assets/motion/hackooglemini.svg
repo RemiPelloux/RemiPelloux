@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="t d">
+  <title id="t">HackoogleMini, software-only research on the Google Home Mini</title>
+  <desc id="d">Animated illustration: a smart speaker's lights pulse while a research chain moves from a network redirect, through a browser engine bug, toward a shell, and finally a local language model with MCP tools.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0b14"/>
+      <stop offset="1" stop-color="#120f24"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5c4ee5" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#5c4ee5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="puck" cx="0.5" cy="0.35" r="0.65">
+      <stop offset="0" stop-color="#e9e6f2"/>
+      <stop offset="1" stop-color="#a9a4bd"/>
+    </radialGradient>
+    <clipPath id="frame"><rect width="1200" height="380" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-variant-ligatures: none; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .led { animation: led 1.6s ease-in-out infinite; }
+    .e2 { animation-delay: .2s; } .e3 { animation-delay: .4s; } .e4 { animation-delay: .6s; }
+    @keyframes led { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
+    .flow { stroke-dasharray: 4 8; animation: flow 1s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -12; } }
+    .step { opacity: .28; animation: step 10s ease-in-out infinite; }
+    .t2 { animation-delay: 1.2s; } .t3 { animation-delay: 2.4s; } .t4 { animation-delay: 3.6s; }
+    @keyframes step { 0% { opacity: .28; } 4%,70% { opacity: 1; } 80%,100% { opacity: .28; } }
+    .wave { transform-box: fill-box; transform-origin: center; animation: wave 2.4s ease-out infinite; }
+    .w2 { animation-delay: .8s; } .w3 { animation-delay: 1.6s; }
+    @keyframes wave { from { opacity: .7; transform: scale(.6); } to { opacity: 0; transform: scale(1.5); } }
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .step { opacity: 1; }
+      .wave { opacity: 0; }
+    }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="380" fill="url(#bg)"/>
+    <ellipse cx="1000" cy="80" rx="380" ry="240" fill="url(#glow)"/>
+
+    <g class="sans">
+      <text x="56" y="62" font-size="12" font-weight="700" letter-spacing="2.2" fill="#a59bff">SECURITY RESEARCH · NO HARDWARE MODS</text>
+      <text x="56" y="122" font-size="54" font-weight="800" letter-spacing="-2" fill="#ffffff">HackoogleMini</text>
+      <text x="56" y="160" font-size="18" fill="#c4bfdc">Working toward a shell on a Google Home Mini,</text>
+      <text x="56" y="186" font-size="18" fill="#c4bfdc">to swap its assistant for a local LLM with MCP.</text>
+    </g>
+
+    <!-- speaker -->
+    <g transform="translate(250 280)">
+      <circle class="wave" r="70" fill="none" stroke="#a59bff" stroke-width="2"/>
+      <circle class="wave w2" r="70" fill="none" stroke="#a59bff" stroke-width="2"/>
+      <circle class="wave w3" r="70" fill="none" stroke="#a59bff" stroke-width="2"/>
+      <ellipse cy="10" rx="70" ry="26" fill="#2a2640"/>
+      <ellipse rx="70" ry="26" fill="url(#puck)"/>
+      <circle class="led" cx="-24" r="4.5" fill="#4285f4"/>
+      <circle class="led e2" cx="-8" r="4.5" fill="#ea4335"/>
+      <circle class="led e3" cx="8" r="4.5" fill="#fbbc05"/>
+      <circle class="led e4" cx="24" r="4.5" fill="#34a853"/>
+    </g>
+    <g class="mono" font-size="12" fill="#8c86a8">
+      <text x="56" y="250">fw 3.78</text>
+      <text x="56" y="270">Chrome 92</text>
+      <text x="56" y="290">Armada 1500</text>
+    </g>
+
+    <!-- chain -->
+    <g class="sans" font-size="13" font-weight="700">
+      <g class="step" transform="translate(560 214)">
+        <rect width="132" height="64" rx="12" fill="#1c1833" stroke="#a59bff" stroke-opacity="0.45"/>
+        <text x="66" y="28" text-anchor="middle" fill="#ece9ff">DNS redirect</text>
+        <text x="66" y="48" font-size="11" font-weight="400" text-anchor="middle" fill="#9a94b8">fake Cast registry</text>
+      </g>
+      <g class="step t2" transform="translate(720 214)">
+        <rect width="132" height="64" rx="12" fill="#1c1833" stroke="#f48271" stroke-opacity="0.55"/>
+        <text x="66" y="28" text-anchor="middle" fill="#ece9ff">V8 bug</text>
+        <text x="66" y="48" font-size="11" font-weight="400" text-anchor="middle" fill="#9a94b8">CVE-2021-30563</text>
+      </g>
+      <g class="step t3" transform="translate(880 214)">
+        <rect width="132" height="64" rx="12" fill="#1c1833" stroke="#34d399" stroke-opacity="0.55"/>
+        <text x="66" y="28" text-anchor="middle" fill="#ece9ff">goal: shell</text>
+        <text x="66" y="48" font-size="11" font-weight="400" text-anchor="middle" fill="#9a94b8">cast_shell user</text>
+      </g>
+      <g class="step t4" transform="translate(1040 214)">
+        <rect width="120" height="64" rx="12" fill="#5c4ee5" fill-opacity="0.28" stroke="#a59bff"/>
+        <text x="60" y="28" text-anchor="middle" fill="#ffffff">local LLM</text>
+        <text x="60" y="48" font-size="11" font-weight="400" text-anchor="middle" fill="#cdc6ff">+ MCP tools</text>
+      </g>
+    </g>
+    <g fill="none" stroke="#a59bff" stroke-width="2">
+      <path class="flow" d="M330 270 C420 270 470 246 556 246"/>
+      <path class="flow" d="M694 246H716"/>
+      <path class="flow" d="M854 246H876"/>
+      <path class="flow" d="M1014 246H1036"/>
+    </g>
+
+    <g transform="translate(560 96)" class="mono" font-size="13">
+      <rect width="600" height="84" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+      <text x="18" y="30" fill="#a59bff">$ <tspan fill="#ece9ff">cast-probe --lan</tspan></text>
+      <text x="18" y="56" fill="#34d399">Chrome/92.0.4515.0 pre-release · fw 3.78.540761<tspan class="caret" fill="#a59bff">▍</tspan></text>
+    </g>
+
+    <g class="sans" font-size="12" font-weight="600">
+      <g transform="translate(560 304)"><rect width="140" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="70" y="18.5" text-anchor="middle" fill="#ddd9f0">Reverse engineering</text></g>
+      <g transform="translate(708 304)"><rect width="112" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="56" y="18.5" text-anchor="middle" fill="#ddd9f0">Cast protocol</text></g>
+      <g transform="translate(828 304)"><rect width="108" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="54" y="18.5" text-anchor="middle" fill="#ddd9f0">BLE setup</text></g>
+      <g transform="translate(944 304)"><rect width="108" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="54" y="18.5" text-anchor="middle" fill="#ddd9f0">YAFFS2</text></g>
+      <g transform="translate(1060 304)"><rect width="100" height="28" rx="14" fill="#5c4ee5" fill-opacity="0.24"/><text x="50" y="18.5" text-anchor="middle" fill="#cdc6ff">Research</text></g>
+    </g>
+  </g>
+</svg>

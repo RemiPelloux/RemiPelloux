@@ -10,7 +10,11 @@ The waveform and light illustrate the work done by OpenPlod and LumaSync.
 Later assets extend the same language: Modelly moves agents across a grid and
 a network while a data-collection chart draws; android-hid-kb streams bytes
 down a USB cable into a console; GalaxyCrash opens a lock then reboots it away;
-deal-club deals a fan of property cards. These are decorative illustrations,
+deal-club deals a fan of property cards. Concerto routes four stories to
+models, lights their checks and merges them into main; Pelloux Guidelines
+fills limit meters while an audit flags then clears a debug line; kill-my-idea
+fills a score ring and stamps a verdict; HackoogleMini pulses a speaker's
+lights while a research chain lights up step by step. These are decorative illustrations,
 not live processing, telemetry or availability indicators.
 
 The SVGs are self-contained, with no scripts, fonts, network requests or filters.

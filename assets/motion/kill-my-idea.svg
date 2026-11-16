@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="400" viewBox="0 0 590 400" role="img" aria-labelledby="t d">
+  <title id="t">kill-my-idea, a Claude Code plugin that tests business ideas</title>
+  <desc id="d">Animated illustration: sources are collected one by one, a score ring fills to 44 out of 100, and a NO-GO verdict is stamped on the card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15120f"/>
+      <stop offset="1" stop-color="#211a15"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e5383b" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#e5383b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="frame"><rect width="590" height="400" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .sans { font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-variant-ligatures: none; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .src { opacity: 0; animation: src 9s ease-out infinite; }
+    .s2 { animation-delay: .4s; } .s3 { animation-delay: .8s; } .s4 { animation-delay: 1.2s; } .s5 { animation-delay: 1.6s; }
+    @keyframes src { 0% { opacity: 0; transform: translateX(-10px); } 4%,86% { opacity: 1; transform: translateX(0); } 94%,100% { opacity: 0; } }
+    .ring { stroke-dasharray: 264; stroke-dashoffset: 264; animation: ring 9s cubic-bezier(.16,1,.3,1) 1.8s infinite; }
+    @keyframes ring { 0% { stroke-dashoffset: 264; } 18%,70% { stroke-dashoffset: 148; } 80%,100% { stroke-dashoffset: 264; } }
+    .stamp { opacity: 0; transform-box: fill-box; transform-origin: center; animation: stamp 9s cubic-bezier(.2,1.4,.4,1) 3.4s infinite; }
+    @keyframes stamp { 0% { opacity: 0; transform: rotate(-8deg) scale(1.6); } 4%,52% { opacity: 1; transform: rotate(-8deg) scale(1); } 60%,100% { opacity: 0; transform: rotate(-8deg) scale(1); } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .src, .stamp { opacity: 1; }
+      .ring { stroke-dashoffset: 148; }
+    }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="590" height="400" fill="url(#bg)"/>
+    <ellipse cx="470" cy="80" rx="250" ry="200" fill="url(#glow)"/>
+
+    <g class="sans">
+      <text x="36" y="52" font-size="12" font-weight="700" letter-spacing="2.2" fill="#e5383b">CLAUDE CODE PLUGIN</text>
+      <text x="36" y="96" font-size="38" font-weight="800" letter-spacing="-1" fill="#efe8dc">kill-my-idea</text>
+      <text x="36" y="126" font-size="16" fill="#b8ab98">Tries to kill your idea before you build it.</text>
+    </g>
+
+    <!-- sources -->
+    <g class="mono" font-size="12" transform="translate(36 166)">
+      <text class="src" y="0" fill="#b8ab98"><tspan fill="#e5383b">[1]</tspan> 11 competitors found</text>
+      <text class="src s2" y="26" fill="#b8ab98"><tspan fill="#e5383b">[2]</tspan> free tool does the job</text>
+      <text class="src s3" y="52" fill="#b8ab98"><tspan fill="#e5383b">[3]</tspan> CAC above LTV</text>
+      <text class="src s4" y="78" fill="#b8ab98"><tspan fill="#e5383b">[4]</tspan> look-alike: $10 / month</text>
+      <text class="src s5" y="104" fill="#b8ab98"><tspan fill="#e5383b">[5]</tspan> … 40 sources linked</text>
+    </g>
+
+    <!-- verdict card -->
+    <g transform="translate(330 150)">
+      <rect width="224" height="168" rx="14" fill="#efe8dc"/>
+      <text class="sans" x="18" y="28" font-size="11" font-weight="700" letter-spacing="1.8" fill="#7a6d5c">VERDICT</text>
+      <g transform="translate(66 96)">
+        <circle r="42" fill="none" stroke="#15120f" stroke-opacity="0.1" stroke-width="9"/>
+        <circle class="ring" r="42" fill="none" stroke="#e5383b" stroke-width="9" stroke-linecap="round" transform="rotate(-90)"/>
+        <text class="sans" y="8" font-size="26" font-weight="800" text-anchor="middle" fill="#15120f">44</text>
+        <text class="sans" y="26" font-size="10" text-anchor="middle" fill="#7a6d5c">/ 100</text>
+      </g>
+      <text class="sans" x="128" y="84" font-size="11" fill="#7a6d5c">confidence</text>
+      <text class="sans" x="128" y="102" font-size="14" font-weight="700" fill="#15120f">high</text>
+      <text class="sans" x="128" y="128" font-size="11" fill="#7a6d5c">7-day test</text>
+      <text class="sans" x="128" y="146" font-size="14" font-weight="700" fill="#15120f">ready</text>
+      <g transform="translate(118 12)"><g class="stamp">
+        <rect width="92" height="34" rx="6" fill="none" stroke="#e5383b" stroke-width="3"/>
+        <text class="sans" x="46" y="24" font-size="18" font-weight="800" letter-spacing="1" text-anchor="middle" fill="#e5383b">NO-GO</text>
+      </g></g>
+    </g>
+
+    <g class="sans" font-size="12" font-weight="600">
+      <g transform="translate(36 344)"><rect width="96" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="48" y="18.5" text-anchor="middle" fill="#e2d8c8">Score /100</text></g>
+      <g transform="translate(140 344)"><rect width="150" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="75" y="18.5" text-anchor="middle" fill="#e2d8c8">GO · PIVOT · NO-GO</text></g>
+      <g transform="translate(298 344)"><rect width="104" height="28" rx="14" fill="#ffffff" fill-opacity="0.07"/><text x="52" y="18.5" text-anchor="middle" fill="#e2d8c8">Roast mode</text></g>
+      <g transform="translate(410 344)"><rect width="144" height="28" rx="14" fill="#e5383b" fill-opacity="0.18"/><text x="72" y="18.5" text-anchor="middle" fill="#ffaaa8">Every number sourced</text></g>
+    </g>
+  </g>
+</svg>
