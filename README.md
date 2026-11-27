@@ -42,7 +42,7 @@
 
 I'm **Rémi Pelloux**, an AI engineer and the **CTO and co-founder of [OpenPro](https://openpro.ai)**, in Nice, France. I have ten years of full-stack, security and cloud work behind me. Today I design **LLM systems and run them in production**: tool-calling agents, MCP servers, retrieval, realtime voice, and routing across providers with fallback, caching and cost control. In my spare time I build **tools for AI coding agents**, **local-first apps**, **Rust systems tools** and **security research**, all in public. Before OpenPro I did security, R&D and full-stack work for clients including Dassault Aviation, DGA, Thales and Decathlon.
 
-**[Portfolio →](https://remipelloux.github.io/)** &nbsp;·&nbsp; [CV in English and French](https://remipelloux.github.io/cv/) &nbsp;·&nbsp; [Security reports](https://remipelloux.github.io/security/) &nbsp;·&nbsp; [Lab](https://remipelloux.github.io/lab/)
+**[Portfolio →](https://remipelloux.github.io/)** &nbsp;·&nbsp; [CV in English and French](https://remipelloux.github.io/cv/) &nbsp;·&nbsp; [Security reports](https://remipelloux.github.io/security/) &nbsp;·&nbsp; [Lab](https://remipelloux.github.io/lab/) &nbsp;·&nbsp; [Learn to code with AI agents](https://remipelloux.github.io/iadevlearn/)
 
 <br />
 
@@ -285,6 +285,7 @@ Everything else is in the [archive](https://remipelloux.github.io/work/) and the
 | [**deal-club.fun**](https://deal-club.fun) | An installable French real-estate card game (PWA). You buy, trade and auction properties against AI opponents that run on your device, so it plays offline. Includes 58 original hand-drawn SVG illustrations |
 | [**LeadsIt**](https://leadsit.eu) | An automated B2B lead search platform, with an in-app agent that has 18 tools and asks for confirmation before every write, plus a hosted MCP server |
 | [**Gitverse**](https://remipelloux.github.io/gitverse/) | A gamified Git course that runs entirely in the browser, in English and French |
+| [**IA Dev Learn**](https://remipelloux.github.io/iadevlearn/) | A free course for learning to code with AI agents by doing it. You prompt Claude Code, Codex, Gemini CLI and Antigravity in a simulated terminal, write rules and skills, and run a team of agents in parallel with Orca. No account or API key, in English and French |
 
 <br />
 
